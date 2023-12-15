@@ -1,0 +1,92 @@
+/* This stylesheet is intended to increase readability. Adapted from
+   http://antijingoist.github.io/web-accessibility/stylesheets/accessibility.css.
+*/
+@namespace epub url("http://www.idpf.org/2007/ops");
+
+code,
+kbd,
+pre,
+samp{
+  font-family:"Courier New", Courier, monospace !important;
+}
+
+*{
+  font-family:Verdana, Arial, sans-serif !important;
+}
+
+/* Use an off-white background. Some users need high
+   contrast for better reading. Some need low contrast. A
+   happy medium would be off white to reduce "glare" and
+   black text. Anyone that needs a greater extreme likely
+   overrides stylesheets. The text is colored dark blue to
+   assist with "glare" issues, but also to make the black
+   symbols subtly stand out. */
+body {
+  /* normal line height is 1.2
+   (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Values).
+
+   W3C recommends "Line spacing (leading) is at least space-and-a-half
+   within paragraphs"
+   (https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation).
+
+   MDN Web Docs recommends: "Use a minimum value of 1.5 for
+   line-height for main paragraph content. This will help people
+   experiencing low vision conditions, as well as people with
+   cognitive concerns such as Dyslexia. If the page is zoomed to
+   increase the text size, using a unitless value ensures that the
+   line height will scale proportionately
+   (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Accessibility_concerns).
+
+   So we multiply 1.2 by 1.5 which results in 1.8. */
+  line-height:1.8;
+  margin:auto 0;
+  padding:0 100;
+  color:#1A0033;
+}
+
+/* Make sure images take the whole width (and not more) */
+img {
+    max-width: 60%;
+}
+
+/* Images with class 'block-image' should display as a block */
+.block-image {
+  display:block;
+}
+
+/* SBS specific changes */
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.poem{
+  margin-left:3em;
+}
+.linegroup + .linegroup{
+  margin-top:3em;
+}
+
+.emptyline{
+  margin-top:3em;
+  visibility:hidden;
+}
+
+.bridgehead{
+  font-weight:bold;
+}
+
+.byline, span[epub|type="z3998:author"]{
+  display:block;
+}
+
+span[epub|type="pagebreak"], div[epub|type="pagebreak"]{
+  display:block;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
