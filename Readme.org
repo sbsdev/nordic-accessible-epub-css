@@ -11,4 +11,11 @@ accessible as possible.
 The goal of this repository is to create a common CSS that
 incorporates all the best practices.
 
+* Samples
+
+There are some CSS files in the samples folder
+
+- =mtm.css= is from a sample book from MTM
+- =sbs.css= is the CSS that is included in all the ebooks produced by SBS
+- =epub3-to-daisy202.css= is from the DAISY pipeline
 
