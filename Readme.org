@@ -1,0 +1,14 @@
+
+* Introduction
+
+Many of the Nordic national libraries for accessible literature and
+publishing distribute their books in the form of EPUB3. This contains
+a CSS that aims to render the content in an way so that it is as
+accessible as possible.
+
+* Goal
+
+The goal of this repository is to create a common CSS that
+incorporates all the best practices.
+
+
