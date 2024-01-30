@@ -1,0 +1,188 @@
+@namespace epub "http://www.idpf.org/2007/ops";
+@namespace z3998 "http://www.daisy.org/z3998/2012/vocab/structure/#";
+
+aside {
+    border: 1px solid #555;
+    margin: 1em;
+    padding: .5em;
+}
+
+body {
+    display: block;
+    font-family: "Arial Unicode MS", sans-serif;
+    margin: 2em;
+}
+
+code, kbd, pre, samp {
+    font-family: "Consolas", "Courier", mono;
+}
+
+div.linegroup {
+    margin:.5em 0 .5em 0;
+}
+
+figcaption {
+    font-size: .8em;
+font-style: italic;
+padding-top: .3em;
+}
+
+figure {
+    margin: 1em;
+}
+
+figure > aside.prodnote {
+    border: 1px solid #555;
+    margin: 1em 0 1em 0;
+    padding: .5em;
+}
+
+
+img {
+    margin: 0;
+}
+
+ol.list-style-type-none,
+ul.list-style-type-none {
+    list-style-type: none;
+}
+
+p {
+    margin: 0 0 .5em 0;
+}
+
+p.bridgehead {
+    font-weight: bold;
+}
+
+p.line {
+    margin: 0;
+}
+
+section.poem {
+    margin: 1em 0 1em 0;
+    padding: 0 2em 0 2em;
+}
+
+span.linenum {
+    margin-right: .5em;
+}
+
+span.linenum::before {
+    content: "[";
+}
+
+span.linenum::after {
+    content: "]";
+}
+
+table {
+    border-spacing: 0;
+    margin:.5em 0 .5em 0;
+}
+
+td, th {
+    border: 1px solid #555;
+    margin: 0px;
+    padding: .25em;
+}
+
+th {
+    background-color: #CCC;
+    font-weight: normal;
+}
+/*Changes October 2015*/
+/*Carl Rosschou*/
+
+blockquote {
+font-size: 1em;
+font-style: normal;
+margin: 1em 2em 0 2em;
+text-align: left;
+}
+
+hr.emptyline {
+    border: 0;
+    margin: 2em auto 2em auto;
+}
+
+hr.separator {
+  border: none;
+margin-top: 1em;
+text-align: center;
+}
+
+hr.separator::after {
+content: "*";
+border: none;
+margin-top: 1em;
+text-align: center;
+}
+
+
+/*color and inline*/
+/*text formating*/
+.underlined {
+text-decoration: underline;    
+}
+.crossed-out {
+    text-decoration: line-through;
+}
+/*text color*/
+
+.blue {
+    color:blue;
+}
+.green {
+    color:green;
+}
+.red{
+color: red;
+}
+.silver {
+    color:silver;
+}
+.white {
+    color:white;
+}
+.yellow {
+    color:yellow;
+}
+
+/*Baggrunde*/
+
+
+
+.green-bg {
+    color:green;
+}
+.red-bg {
+    background-color:red;
+}
+.blue-bg {
+    background-color:blue;
+}
+.silver-bg {
+    background-color:silver;
+}
+
+/* --- FOOTNOTES --- */
+a[role=doc-noteref] {
+   vertical-align: super;
+   line-height: normal;
+   font-size: 75%;
+   border: 1px solid #FF0000;
+}
+
+
+a[role="doc-backlink"] {
+   font-size: 75%;
+   text-decoration: none;
+   border: 1px solid #FF0000; 
+}
+
+aside[role="doc-footnote"] {
+  border: thin #FF0000 solid;
+  padding: 1em;
+  margin: 1em;
+}
