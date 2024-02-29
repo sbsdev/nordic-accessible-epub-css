@@ -1,0 +1,351 @@
+@font-face
+{
+font-family: "Source Serif";
+src: url("../fonts/SourceSerif4-Regular.otf") format("opentype");
+font-style: normal;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Serif";
+src: url("../fonts/SourceSerif4-It.otf") format("opentype");
+font-style: italic;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Serif Subhead";
+src: url("../fonts/SourceSerif4Subhead-Light.otf") format("opentype");
+font-style: normal;
+font-weight: 300;
+}
+@font-face
+{
+font-family: "Source Serif Subhead";
+src: url("../fonts/SourceSerif4Subhead-Bold.otf") format("opentype");
+font-style: normal;
+font-weight: bold;
+}
+@font-face
+{
+font-family: "Source Serif Subhead";
+src: url("../fonts/SourceSerif4Subhead-BoldIt.otf") format("opentype");
+font-style: italic;
+font-weight: bold;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-Regular.otf") format("opentype");
+font-style: normal;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-It.otf") format("opentype");
+font-style: italic;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-Bold.otf") format("opentype");
+font-style: normal;
+font-weight: bold;
+}
+body {
+    text-align: left;
+    widows: 2;
+    font-family: "Source Serif", serif;
+}
+p {
+    line-height: 1.45;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 1em;
+}
+h1 + p, h2 + p {
+    text-indent: 0;
+}
+/* inline character styles */
+cite, em, .italic {
+    font-style: italic;
+}
+.small-caps {
+    font-variant:small-caps;
+}
+a {
+    text-decoration: underline;
+}
+/* FRONTMATTER */
+/* title page */
+section.titlepage p {
+    text-align: center;
+    text-indent: 0;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+p.book-author {
+    font-size: 1.4em;
+    font-style: italic;
+	line-height: 1;
+	margin-top: 2em;
+	text-indent: 0;
+	}
+p.book-author + p.book-title {
+    margin-top: 1.5rem;
+}
+p.book-subtitle {
+	font-size: 1.4em;
+	line-height: 1.25;
+	margin-top: 1.2rem;
+	text-indent: 0;
+    }
+p.editors {
+    font-size: 1.25em;
+	line-height: 1.3;
+	margin-top: 3rem;
+    font-style: italic;
+	text-indent: 0;
+}
+p.publisher {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 4rem;
+    text-indent:0;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    page-break-before: avoid;
+}
+/* copyright page */
+section.copyright-page {
+    margin-top: 2em;
+}
+section.copyright-page p {
+    text-indent:0;
+    font-size:0.85em;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+section.copyright-page b {
+    font-family: "Source Serif Subhead", serif;
+}
+/* preface */
+p.signature {
+    margin-left: 1em;
+    margin-top: 0.8em;
+    text-indent: 0;
+    text-align: right;
+    padding-right: 2em;
+}
+p.signature + p.signature {
+    margin-top: 0;
+}
+/* headings, including book title */
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    font-family: "Source Serif Subhead", serif;
+}
+h1 {
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4em;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.25em;
+}
+h1.book-title {
+    font-family: "Source Serif Subhead", serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    letter-spacing: 0.025em;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top: 1.5em;
+    text-align: center;
+	}
+/* brevdelarnas rubrik i Lagus */
+section[role=doc-part] h1 {
+    text-transform:uppercase;
+    font-style: normal;
+    font-size:1.6em;
+	letter-spacing: 0.025em; 
+    font-weight:bold;
+	line-height:1.2em;
+    margin-top:2rem;
+    margin-bottom: 3em;
+	text-indent:0;
+}
+p.subtitle {
+    font-size:1.4em;
+    line-height:1.3em;
+    margin-top:1.4rem;
+    text-indent:0;
+    text-align: center;
+}
+h2 {
+    text-align: left;
+    font-size:1.1em;
+	font-weight:bold;
+	line-height:1.3;
+	margin-top:1.5rem;
+	margin-bottom: 0.5rem;
+}
+p.author {
+    text-indent: 0;
+    font-size: 1.1em;
+}
+h1 + h2 {
+    margin-top: 3em;
+}
+hr.emptyline {
+    border-width: 0;
+    margin-top: 1.5em;
+}
+div.closer p.salute {
+    margin-top: 0.5em;
+}
+p.signed {
+    text-indent: 0;
+    margin-left: 2em;
+    margin-top: 0.5em;
+}
+p.signed + p.signed {
+    margin-top: 0;
+}
+div.postscript {
+    margin-top: 1em;
+}
+div.postscript p {
+    text-indent: 0;
+}
+/* embedded toc */
+.hidden {
+    display: none;
+}
+nav[role=doc-toc] ol {
+    list-style-type: none;
+    margin-bottom: 0.8em;
+    font-size:0.95em;
+    padding: 0;
+}
+nav[role=doc-toc] li > ol {
+    margin-left:1.5em;
+    padding-left:0;
+}
+nav[role=doc-toc] ol > li.part {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+nav[role=doc-toc] ol ol > li{
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 0;
+}
+nav[role=doc-toc] ol > li.part > ol > li:first-child {
+    margin-top: 0.5em;
+}
+/* paragraph spacing */
+.space-before {
+    margin-top: 0.8em;
+}
+.no-indent {
+    text-indent:0;
+}
+blockquote {
+    margin:0.8em 1em 0.8em 1em;
+    font-size: 0.9rem;
+}
+/* no text-indent on first p of blockquote */
+blockquote p:first-child {
+    text-indent: 0;
+}
+blockquote p.line-group {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+span.line {
+    display: inline-block;
+    margin-left: 1.25em;
+    text-indent: -1.25em;
+}
+/* notes */
+a[role=doc-noteref] {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+    font-size: 0.85em;
+    font-style: normal;
+}
+/* note ref in heading */
+h1 a[role=doc-noteref] {
+    font-size: 0.6em;
+}
+section[role=doc-endnotes] ol {
+    padding-left: 1.55rem;
+    font-family: "Source Sans", sans-serif;
+    font-size: 0.85em;
+}
+section[role=doc-endnotes] li p {
+    text-indent: 0;
+}
+section[role=doc-glossary] dl {
+    font-family: "Source Sans", sans-serif;
+    font-size: 0.95em;
+}
+dd {
+    margin-bottom: 1em;
+}
+dt {
+    font-weight: bold;
+}
+/* bibliography */
+ul.none {
+    list-style-type: none;
+}
+section[role="doc-bibliography"] ul {
+    font-size: 0.85rem;
+    margin-left: 1.2em;
+    text-indent: -1.2em;
+    padding: 0;
+}
+section[role="doc-bibliography"] h2 + p {
+    margin-left: 1em;
+    text-indent: -1em;
+}
+/* images */
+figure {
+    margin:1.5em 0 1.5em 0em;
+    padding:0;
+    page-break-inside: avoid;
+}
+figcaption {
+    font-size: 0.85rem;
+    text-indent: 0;
+    margin-top: 0.5em;
+    line-height: 1.3;
+    font-family: "Source Sans", sans-serif;
+}
+figcaption p {
+    text-indent: 0;
+}
+figcaption span.image-credit {
+    color:#757575;
+}
+img {
+    max-width: 100%;
+    max-height: 80vh;
+}

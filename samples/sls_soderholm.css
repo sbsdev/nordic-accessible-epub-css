@@ -1,0 +1,535 @@
+@font-face
+{
+font-family: "Source Serif";
+src: url("../fonts/SourceSerif4-Regular.otf") format("opentype");
+font-style: normal;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Serif";
+src: url("../fonts/SourceSerif4-It.otf") format("opentype");
+font-style: italic;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Serif";
+src: url("../fonts/SourceSerif4-SemiboldIt.otf") format("opentype");
+font-style: italic;
+font-weight: 600;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-Regular.otf") format("opentype");
+font-style: normal;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-ExtraLight.otf") format("opentype");
+font-style: normal;
+font-weight: 200;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-It.otf") format("opentype");
+font-style: italic;
+font-weight: normal;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-Bold.otf") format("opentype");
+font-style: normal;
+font-weight: 700;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-BoldIt.otf") format("opentype");
+font-style: italic;
+font-weight: 700;
+}
+@font-face
+{
+font-family: "Source Sans";
+src: url("../fonts/SourceSans3-Semibold.otf") format("opentype");
+font-style: normal;
+font-weight: 600;
+}
+img[role="doc-cover"] {
+    width: 100%;
+    max-height: 100%;
+}
+body {
+    text-align: left;
+    widows: 2;
+    font-family: "Source Serif";
+    font-size: 1em;
+}
+div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p {
+    line-height: 1.45;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-indent: 1em;
+}
+h1 + p, h2 + p, h3 + p, blockquote + p, blockquote > p:first-child, li > p, header + p {
+    text-indent: 0;
+}
+/* inline character styles */
+cite, em, .italic {
+    font-style: italic;
+}
+.small-caps {
+    font-variant: small-caps;
+}
+a {
+    text-decoration: underline;
+}
+/* FRONTMATTER */
+/* Om boken */
+section.om-boken {
+  margin-top: 2em;
+}
+/* book title page */
+section.titlepage {
+    font-family: "Source Sans";
+    text-align:center;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+p.editors {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin-top: 1.4rem;
+    text-indent: 0;
+}
+p.publisher {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 8em;
+    text-indent:0;
+    page-break-before:avoid;
+}
+/* copyright page */
+section.copyright-page {
+    margin-top: 2em;
+}
+
+section.copyright-page p {
+    text-indent:0;
+    font-family:"Source Sans";
+    font-size:0.8em;
+    margin-top:0.5em;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+/* preface */
+p.signature {
+    margin-left: 1em;
+    margin-top: 0.5em;
+    text-indent: 0;
+}
+h1, h2, h3, h4 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+h1 {
+    text-align: center;
+    font-family: "Source Sans";
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-top: 0.5em;
+    line-height: 1.2em;
+}
+h1 + p:not(.author), h1 + ol {
+     margin-top: 3em;
+}
+h1.book-title {
+    font-size:2em;
+    font-weight: 600;
+    line-height: 1em;
+    margin-top: 2em;
+    margin-bottom: 0;
+    text-indent: 0; 
+	}
+section[role="doc-introduction"] h1 {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+section[role="doc-introduction"] p.subtitle {
+    font-family: "Source Sans";
+    text-indent: 0;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+nav[role="doc-toc"] h1 {
+    text-align: left;
+}
+p.author {
+    font-family: "Source Sans";
+    text-indent: 0;
+    margin-bottom: 3em;
+    text-align: center;
+}
+h1.collection-title {
+    text-align: center;
+    font-family: "Source Sans";
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 4em;
+}
+h2 {
+    font-family:"Source Sans";
+    text-align: left;
+    font-size:1.05em;
+    font-weight:bold;
+    line-height:1.3;
+    margin-top:1.5rem;
+    margin-bottom: 0.5rem;
+}
+section#recensioner h2 {
+    font-size:1em;
+    font-weight: 600;
+}
+section[role="doc-bibliography"] h2 {
+    font-size: 1em;
+}
+h1 + section > h2 {
+    margin-top: 3em;
+}
+h3 {
+    font-family: "Source Sans";
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+p.dateline + h3 {
+    margin-top: 0;
+}
+h2 + section > h3 {
+    margin-top: 0.8em;
+}
+section.chapter h3 {
+	font-size: 1em;
+	margin-bottom: 0.5em;
+}
+h3 em {
+    font-style: normal;
+}
+/* styles for diaries */
+section.main h1 {
+    text-align: left;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 5rem;
+    font-size: 3em;
+    color: #808080;
+}
+section.chapter h3 + p.no-indent {
+    margin-top: 2em;
+}
+/* .label should have text-indent */
+section.chapter h2 + p:not(.label) {
+    text-indent: 1em;
+}
+p.label {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+    color:#595959;
+    margin-bottom: 0.75rem;
+    text-indent: 0;
+}
+section.chapter h3 {
+    font-family: "Source Serif";
+}
+section.chapter h3 + p {
+    text-indent: 1em;
+}
+section.chapter h4 {
+    font-family:"Source Sans";
+    text-align: left;
+    font-size:1em;
+	font-weight:600;
+	line-height:1.3;
+	margin-top:1.5rem;
+	margin-bottom: 0.5rem;
+}
+p.dateline + h4 {
+    margin-top: 0;
+}
+div.opener {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+p.dateline {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+p:not(.label) + p.dateline {
+    margin-top: 1em;
+}
+p.dateline.space-before {
+    margin-top: 1em;
+}
+p.salute {
+    margin-bottom: 0.5em;
+}
+hr.space {
+    border: none;
+    margin-top: 0.8em;
+}
+p.lg + hr.space {
+    margin-top: 0;
+}
+hr.bar {
+    border-top: 1px solid #808080;
+    border-bottom: none;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.95em;
+    margin-bottom: 0.85em;
+}
+hr.dashedbar {
+    border-top: 1px dashed #808080;
+    border-bottom: none;
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+p.lg + hr.bar, p.lg + hr.dashedbar {
+    width: initial;
+    max-width: 16em;
+    text-align: left;
+    margin-left: 1em;
+}
+hr.star {
+    border: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+hr.star::after {
+    color: black;
+    content: "*";
+    font-size: 1.1em;
+}
+/* embedded toc */
+.hidden {
+    display: none;
+}
+nav[role=doc-toc] ol {
+    list-style-type: none;
+    margin-bottom: 0.8em;
+    font-size:0.95em;
+    padding: 0;
+}
+nav[role=doc-toc] li > ol {
+    margin-left:1.5em;
+    padding-left:0;
+}
+nav[role=doc-toc] ol > li.part {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+nav[role=doc-toc] ol ol > li{
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 0;
+}
+nav[role=doc-toc] ol > li.part > ol > li:first-child {
+    margin-top: 0.5em;
+}
+/* paragraph spacing */
+.space-before {
+    margin-top: 0.8em;
+}
+/*
+.space-after {
+    margin-bottom: 1em;
+}*/
+.no-indent {
+    text-indent:0;
+}
+/* quotations */
+blockquote {
+    font-size: 0.91em;
+	margin: 0.8rem 1rem 0.8rem 1em;
+}
+p.quote-ref {
+    margin-top: 0.5em;
+}
+section.chapter blockquote {
+  font-size: 1em;
+}
+section.chapter blockquote + p {
+  text-indent: 1em;
+}
+/* poems */
+p.lg {
+    margin-top: 0.8em;
+    margin-left: 1em;
+    text-indent: 0 !important;
+}
+p.lg.no-space {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4em;
+}
+span.l {
+    display: inline-block;
+    margin-left: 1.2em;
+    text-indent: -1.2em;
+}
+blockquote p.lg + blockquote p.lg {
+    margin-top: 0.8em;
+}
+
+/* notes */
+/* diary notes */
+aside[role=doc-footnote] {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+/* notes in introduction */
+a[role=doc-noteref] {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+    font-size: 0.85em;
+    font-style: normal;
+}
+section[role=doc-endnotes] ol {
+    padding-left: 1.2rem;
+    font-family: "Source Sans";
+    font-size: 0.85em;
+}
+section[role=doc-endnotes] li p {
+    text-indent: 0;
+}
+ul {
+    list-style-type: none;
+}
+/* tables */
+table {
+    margin-top: 1.2em;
+    font-family: "Source Sans";
+    border-collapse: collapse; 
+}
+table + table {
+  border-top: 2em;
+}
+section#forteckning-over-grundtexter table, section#manuskriptversioner table {
+  width: 100%;
+}
+caption {
+    font-weight: 700;
+    text-align: center;
+    background-color: #F5F5F5;
+    color: black;
+    padding: 0.25em 0.2em 0.25em 0.2em;
+    border-top: 1px solid #595959;
+    border-bottom: 1px solid #595959;
+}
+th, td {
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  font-weight: 400;
+  color: #595959;
+  padding: 0.25em 0.2em 0.25em 0.2em;
+  border-bottom: 1px solid #595959;
+}
+td {
+  padding: 0.1em;
+}
+tr:first-child td {
+  padding-top: 0.5em;
+}
+section#forteckning-over-grundtexter td.center {
+  text-align: center;
+  padding-right: 20%;
+}
+section#manuskriptversioner td.center {
+  text-align: center;
+  padding-right: 5%;
+}
+section#manuskriptversioner tr.year-start {
+    border-top: 1px solid #595959;
+}
+section#manuskriptversioner tr.year-start td {
+    padding-top: 1em;
+}
+/*
+section#manuskriptversioner tr.year-end td {
+    padding-bottom: 1em;
+}*/
+section#forteckning-over-grundtexter tr th:first-child, section#forteckning-over-grundtexter tr td:first-child {
+  width: 30%;
+}
+section#forteckning-over-grundtexter tr th:last-child, section#forteckning-over-grundtexter tr td:last-child {
+  width: 70%;
+  padding-left: 0.5em;
+}
+section#manuskriptversioner tr th:first-child, section#manuskriptversioner tr td:first-child {
+  width: 50%;
+  padding-right: 0.5em;
+}
+section#manuskriptversioner tr th:last-child, section#manuskriptversioner tr td:last-child {
+  width: 50%;
+  padding-left: 0.5em;
+}
+/* Litteratur, Recensioner */
+section[role="doc-bibliography"] ul {
+    font-size: 0.92rem;
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+    margin-top: 0;
+    padding: 0;
+}
+section[role="doc-bibliography"] p {
+    font-size: 0.92rem;
+}
+section[role="doc-bibliography"] p + ul {
+    margin-top: 0.8em;
+}
+li.archive {
+    font-style: italic;
+}
+li.archive li {
+    font-style: normal;
+}
+section#recensioner ul {
+    margin-left: 1.5em;
+    text-indent: -1.5em;
+    margin-top: 0;
+    padding: 0;
+}
