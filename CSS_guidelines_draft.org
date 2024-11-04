@@ -180,10 +180,10 @@ reading experience across a wide range of books.
 * Body text typography
 
 - Font choice :: Generally, it only makes sense to specify a specific
-  font in the CSS if the font is embedded in the publication or widely
-  used system font. Alternatively, you can specify a generic font
-  family (e.g. sans-serif, serif). It is always a good idea to specify
-  a generic font family as a fallback when you specify a font.
+  font in the CSS if the font is embedded in the publication or is a
+  widely used system font. Alternatively, you can specify a generic
+  font family (e.g. sans-serif, serif). It is always a good idea to
+  specify a generic font family as a fallback when you specify a font.
 
 - Line spacing :: The default line spacing in reading apps is often
   too tight. For a better reading experience, we recommend setting the
