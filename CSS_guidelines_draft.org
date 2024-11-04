@@ -145,9 +145,9 @@ However, certain CSS practices can inadvertently restrict user
 customization, so it's important to write the CSS thoughtfully. Here
 are a few key considerations:
 
-- Avoid absolute units :: Using absolute units like pixels (px) can
+- Avoid absolute units :: Using absolute units like pixels (~px~) can
   prevent text from resizing correctly, limiting the reader's ability
-  to adjust font sizes. Instead, use relative units like em or rem,
+  to adjust font sizes. Instead, use relative units like ~em~ or ~rem~,
   which adapt more flexibly to different user settings and screen
   sizes.
 
@@ -355,7 +355,7 @@ limiting the image height relative to the viewport.
 
 For specific use cases, you can define different image sizes using
 classes. It is always a good idea to use relative units for defining
-image size (%, em), and to use ~max-width~ or similar rather than
+image size (%, ~em~), and to use ~max-width~ or similar rather than
 ~min-width~.
 
 [[#image_ref][CSS example: Images]]
