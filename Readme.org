@@ -11,6 +11,11 @@ accessible as possible.
 The goal of this repository is to create a common CSS that
 incorporates all the best practices.
 
+* Guidelines for accessible CSS
+
+The explain why an accessible CSS is needed and provide general
+guidance for what said CSS needs to cater for.
+
 * Samples
 
 There are some CSS files in the samples folder
