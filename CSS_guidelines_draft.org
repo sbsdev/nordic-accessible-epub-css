@@ -157,7 +157,6 @@ are a few key considerations:
   with a user's chosen background color scheme, potentially making the
   text difficult to read.
 
-
 By following these guidelines, you can ensure that your CSS enhances
 the book's presentation without hindering the reader's ability to
 customize their experience.
@@ -762,7 +761,7 @@ Accessible]]
   }
 #+end_src
 
-** CSS example: Figure descriptions and table des/criptions
+** CSS example: Figure and table descriptions
 :PROPERTIES:
 :CUSTOM_ID:       fig-desc_ref
 :END:
