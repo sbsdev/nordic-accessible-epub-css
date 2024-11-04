@@ -8,7 +8,7 @@ HTML = $(patsubst %.org, %.html, $(SOURCE))
 MD = $(patsubst %.org, %.md, $(SOURCE))
 
 %.pdf: %.org
-	pandoc --variable=lang:en --variable=geometry:a4paper --variable=fontfamily:libertinus --variable=fontsize:12pt --variable=colorlinks:true -o $@ $<
+	pandoc --variable=lang:en --variable=geometry:a4paper --variable=fontfamily:libertinus --variable=fontsize:12pt --variable=colorlinks:true --number-sections -o $@ $<
 
 %.docx: %.org
 	pandoc --variable=lang:en -o $@ $<
