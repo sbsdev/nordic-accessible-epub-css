@@ -6,12 +6,12 @@
 This document provides general guidelines for creating a common,
 accessible CSS stylesheet for EPUB publications produced by Nordic
 special libraries serving print-disabled readers. The aim is to ensure
-that EPUB content is inclusive and adaptable, meeting the diverse needs
-of library patrons. While these guidelines draw on the Web Content
-Accessibility Guidelines (WCAG) and resources such as the DAISY
-Knowledge Base, they extend beyond the basic criteria offered by these
-sources to address broader aspects of readability, text formatting, and
-layout.
+that EPUB content is inclusive and adaptable, meeting the diverse
+needs of library patrons. While these guidelines draw on the [[https://www.w3.org/WAI/standards-guidelines/wcag/][Web
+Content Accessibility Guidelines]] (WCAG) and resources such as the
+[[https://kb.daisy.org/publishing/docs/][DAISY Knowledge Base]], they extend beyond the basic criteria offered by
+these sources to address broader aspects of readability, text
+formatting, and layout.
 
 The CSS rules outlined here are intended to align with EPUBs created
 according to the Nordic Guidelines for the Production of Accessible
