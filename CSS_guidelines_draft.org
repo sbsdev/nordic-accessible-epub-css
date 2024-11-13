@@ -105,11 +105,11 @@ recommend to our patrons will support the book's CSS.
 Including a CSS stylesheet in the book is important for several reasons.
 
 - Enhancing accessibility for visual reading :: Thoughtfully crafted
-   CSS can benefit readers with dyslexia or those who are visually
-   impaired but are able to read visually. It allows for clear
-   headings, proper contrast, customized line spacing, and font
-   choices that improve readability, making the content more
-   accessible and easier to process.
+  CSS can benefit readers with dyslexia or those who are visually
+  impaired but are able to read visually. It allows for clear
+  headings, proper contrast, customized line spacing, and font choices
+  that improve readability, making the content more accessible and
+  easier to process.
 
 - Supporting complex layouts and structure :: Books with tables,
   footnotes, or multi-level headings often require precise styling to
@@ -226,7 +226,7 @@ page numbers' appearance, the font family, weight and style can be
 defined. The page number should be extracted from the aria-label
 attribute, only if the page break element has no text node.
 
-[[#pagination-ref][CSS example: Pagination]]
+[[#pagination_ref][CSS example: Pagination]]
 
 * Blockquotes
 
