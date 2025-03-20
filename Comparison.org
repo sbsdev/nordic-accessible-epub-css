@@ -3,44 +3,44 @@
 #+author: Christian Egli
 #+email: christian.egli@sbs.ch
 #+language: en
-#+COLUMNS: %ITEM %SBS %MTM
+#+COLUMNS: %ITEM %SBS %MTM %COMMENT
 
 * Comparison
 #+BEGIN: columnview :hlines 1 :indent 1 :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3" 
-| ITEM                                                                     | SBS                   | MTM                                                                                                              |
-|--------------------------------------------------------------------------+-----------------------+------------------------------------------------------------------------------------------------------------------|
-| Guidelines                                                               |                       |                                                                                                                  |
-| \_  Body text typography                                                 |                       |                                                                                                                  |
-| \_    Font choice                                                        | courier               | arial                                                                                                            |
-| \_    Line spacing                                                       | 1.8                   | undefined                                                                                                        |
-| \_    Paragraph spacing                                                  | undefined             | undefined                                                                                                        |
-| \_    Page margins                                                       | undefined             | undefined                                                                                                        |
-| \_  Headings                                                             | undefined             | font-size, (partially) bold, margin                                                                              |
-| \_  Pagination                                                           | display:block, margin | display:block, margin, border-top, font-family:arial, bold                                                       |
-| \_  Blockquotes                                                          | undefined             | font-style:italic, margin, font-size:90%                                                                         |
-| \_  Lists                                                                | list-style-type       | margin                                                                                                           |
-| \_    Plain lists                                                        | undefined             | list-style-type:none                                                                                             |
-| \_    Definition lists                                                   | undefined             | font-weight:bold                                                                                                 |
-| \_  Text boxes                                                           | undefined             | border, background-color, margin, padding                                                                        |
-| \_  Poems                                                                |                       |                                                                                                                  |
-| \_    Poem/verse lines                                                   | margin-left           | font-family:times, font-size:105%,margin                                                                         |
-| \_    Line numbers                                                       | undefined             | position:absolute, margin-left:-1.5em                                                                            |
-| \_  Links                                                                | undefined             | text-decoration:underline, a:hover:color                                                                         |
-| \_  Note references                                                      | undefined             | font-size:75%, border:1px solid;                                                                                 |
-| \_  Footnotes                                                            | undefined             | border:thin solid; padding:1em; margin:1em;                                                                      |
-| \_  Endnotes                                                             | undefined             | undefined                                                                                                        |
-| \_  Computer code                                                        | font-family:courier   | font-family:courier                                                                                              |
-| \_  Figures                                                              | undefined             | margin:1.5em 0 1.5em 0em, padding:0, page-break-inside:avoid                                                     |
-| \_    Images                                                             | max-width: 60%        | border:none, max-width:100%, max-height:80vh                                                                     |
-| \_    Figure captions                                                    | undefined             | font-size:0.85rem, text-indent:0, margin-top:0.5em, margin-bottom:0.5em, line-height:1.3, font-family:sans-serif |
-| \_    Figure descriptions and table descriptions (extended descriptions) | undefined             | border:1px solid #A7A7A7, background-color:white, color:black, margin-top:1em, margin-bottom:1em, padding:1em    |
-| \_  Tables                                                               |                       |                                                                                                                  |
-| \_    General                                                            | undefined             | border:2px solid gray, padding:1em, font-size:80%, margin-top:1.5em, margin-bottom:2em, border-collapse:collapse |
-| \_    Heading Row                                                        | undefined             | border:1px solid gray, font-weight:bold, text-align:left, vertical-align:top, padding:0.5em                      |
-| \_    Rows                                                               | undefined             | border:1px solid gray, padding: 0.5em                                                                            |
-| \_    Captions                                                           | undefined             | font-size:0.85rem, text-align:left, margin, line-height:1.3, font-family:sans-serif                              |
-| \_    Wrapper                                                            | undefined             | overflow-x:auto, overflow-y:auto, max-width:100%, max-height:100%                                                |
-| \_  Media overlays                                                       | undefined             | highlighting active text: background-color:yellow, color:black; fading text: undefined                           |
+| ITEM                                                                     | SBS                   | MTM                                                                                                              | COMMENT                |
+|--------------------------------------------------------------------------+-----------------------+------------------------------------------------------------------------------------------------------------------+------------------------|
+| Guidelines                                                               |                       |                                                                                                                  |                        |
+| \_  Body text typography                                                 |                       |                                                                                                                  |                        |
+| \_    Font choice                                                        | courier               | arial                                                                                                            |                        |
+| \_    Line spacing                                                       | 1.8                   | undefined                                                                                                        |                        |
+| \_    Paragraph spacing                                                  | undefined             | undefined                                                                                                        |                        |
+| \_    Page margins                                                       | undefined             | undefined                                                                                                        |                        |
+| \_  Headings                                                             | undefined             | font-size, (partially) bold, margin                                                                              |                        |
+| \_  Pagination                                                           | display:block, margin | display:block, margin, border-top, font-family:arial, bold                                                       |                        |
+| \_  Blockquotes                                                          | undefined             | font-style:italic, margin, font-size:90%                                                                         |                        |
+| \_  Lists                                                                | list-style-type       | margin                                                                                                           |                        |
+| \_    Plain lists                                                        | undefined             | list-style-type:none                                                                                             |                        |
+| \_    Definition lists                                                   | undefined             | font-weight:bold                                                                                                 |                        |
+| \_  Text boxes                                                           | undefined             | border, background-color, margin, padding                                                                        |                        |
+| \_  Poems                                                                |                       |                                                                                                                  |                        |
+| \_    Poem/verse lines                                                   | margin-left           | font-family:times, font-size:105%,margin                                                                         | why is the font Times? |
+| \_    Line numbers                                                       | undefined             | position:absolute, margin-left:-1.5em                                                                            |                        |
+| \_  Links                                                                | undefined             | text-decoration:underline, a:hover:color                                                                         |                        |
+| \_  Note references                                                      | undefined             | font-size:75%, border:1px solid;                                                                                 |                        |
+| \_  Footnotes                                                            | undefined             | border:thin solid; padding:1em; margin:1em;                                                                      |                        |
+| \_  Endnotes                                                             | undefined             | undefined                                                                                                        |                        |
+| \_  Computer code                                                        | font-family:courier   | font-family:courier                                                                                              |                        |
+| \_  Figures                                                              | undefined             | margin:1.5em 0 1.5em 0em, padding:0, page-break-inside:avoid                                                     |                        |
+| \_    Images                                                             | max-width: 60%        | border:none, max-width:100%, max-height:80vh                                                                     |                        |
+| \_    Figure captions                                                    | undefined             | font-size:0.85rem, text-indent:0, margin-top:0.5em, margin-bottom:0.5em, line-height:1.3, font-family:sans-serif |                        |
+| \_    Figure descriptions and table descriptions (extended descriptions) | undefined             | border:1px solid #A7A7A7, background-color:white, color:black, margin-top:1em, margin-bottom:1em, padding:1em    |                        |
+| \_  Tables                                                               |                       |                                                                                                                  |                        |
+| \_    General                                                            | undefined             | border:2px solid gray, padding:1em, font-size:80%, margin-top:1.5em, margin-bottom:2em, border-collapse:collapse |                        |
+| \_    Heading Row                                                        | undefined             | border:1px solid gray, font-weight:bold, text-align:left, vertical-align:top, padding:0.5em                      |                        |
+| \_    Rows                                                               | undefined             | border:1px solid gray, padding: 0.5em                                                                            |                        |
+| \_    Captions                                                           | undefined             | font-size:0.85rem, text-align:left, margin, line-height:1.3, font-family:sans-serif                              |                        |
+| \_    Wrapper                                                            | undefined             | overflow-x:auto, overflow-y:auto, max-width:100%, max-height:100%                                                |                        |
+| \_  Media overlays                                                       | undefined             | highlighting active text: background-color:yellow, color:black; fading text: undefined                           |                        |
 #+END:
 
 * Guidelines [15/15]
@@ -119,6 +119,7 @@
 :PROPERTIES:
 :SBS:      margin-left
 :MTM:      font-family:times, font-size:105%,margin
+:COMMENT:  why is the font Times?
 :END:
 
 *** DONE Line numbers
