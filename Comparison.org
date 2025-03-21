@@ -6,41 +6,41 @@
 #+COLUMNS: %ITEM %SBS %MTM %COMMENT
 
 * Comparison
-#+BEGIN: columnview :hlines 1 :indent 1 :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3" 
-| ITEM                                                                     | SBS                   | MTM                                                                                                              | COMMENT                |
-|--------------------------------------------------------------------------+-----------------------+------------------------------------------------------------------------------------------------------------------+------------------------|
-| Guidelines                                                               |                       |                                                                                                                  |                        |
-| \_  Body text typography                                                 |                       |                                                                                                                  |                        |
-| \_    Font choice                                                        | courier               | arial                                                                                                            |                        |
-| \_    Line spacing                                                       | 1.8                   | undefined                                                                                                        |                        |
-| \_    Paragraph spacing                                                  | undefined             | undefined                                                                                                        |                        |
-| \_    Page margins                                                       | undefined             | undefined                                                                                                        |                        |
-| \_  Headings                                                             | undefined             | font-size, (partially) bold, margin                                                                              |                        |
-| \_  Pagination                                                           | display:block, margin | display:block, margin, border-top, font-family:arial, bold                                                       |                        |
-| \_  Blockquotes                                                          | undefined             | font-style:italic, margin, font-size:90%                                                                         |                        |
-| \_  Lists                                                                | list-style-type       | margin                                                                                                           |                        |
-| \_    Plain lists                                                        | undefined             | list-style-type:none                                                                                             |                        |
-| \_    Definition lists                                                   | undefined             | font-weight:bold                                                                                                 |                        |
-| \_  Text boxes                                                           | undefined             | border, background-color, margin, padding                                                                        |                        |
-| \_  Poems                                                                |                       |                                                                                                                  |                        |
-| \_    Poem/verse lines                                                   | margin-left           | font-family:times, font-size:105%,margin                                                                         | why is the font Times? |
-| \_    Line numbers                                                       | undefined             | position:absolute, margin-left:-1.5em                                                                            |                        |
-| \_  Links                                                                | undefined             | text-decoration:underline, a:hover:color                                                                         |                        |
-| \_  Note references                                                      | undefined             | font-size:75%, border:1px solid;                                                                                 |                        |
-| \_  Footnotes                                                            | undefined             | border:thin solid; padding:1em; margin:1em;                                                                      |                        |
-| \_  Endnotes                                                             | undefined             | undefined                                                                                                        |                        |
-| \_  Computer code                                                        | font-family:courier   | font-family:courier                                                                                              |                        |
-| \_  Figures                                                              | undefined             | margin:1.5em 0 1.5em 0em, padding:0, page-break-inside:avoid                                                     |                        |
-| \_    Images                                                             | max-width: 60%        | border:none, max-width:100%, max-height:80vh                                                                     |                        |
-| \_    Figure captions                                                    | undefined             | font-size:0.85rem, text-indent:0, margin-top:0.5em, margin-bottom:0.5em, line-height:1.3, font-family:sans-serif |                        |
-| \_    Figure descriptions and table descriptions (extended descriptions) | undefined             | border:1px solid #A7A7A7, background-color:white, color:black, margin-top:1em, margin-bottom:1em, padding:1em    |                        |
-| \_  Tables                                                               |                       |                                                                                                                  |                        |
-| \_    General                                                            | undefined             | border:2px solid gray, padding:1em, font-size:80%, margin-top:1.5em, margin-bottom:2em, border-collapse:collapse |                        |
-| \_    Heading Row                                                        | undefined             | border:1px solid gray, font-weight:bold, text-align:left, vertical-align:top, padding:0.5em                      |                        |
-| \_    Rows                                                               | undefined             | border:1px solid gray, padding: 0.5em                                                                            |                        |
-| \_    Captions                                                           | undefined             | font-size:0.85rem, text-align:left, margin, line-height:1.3, font-family:sans-serif                              |                        |
-| \_    Wrapper                                                            | undefined             | overflow-x:auto, overflow-y:auto, max-width:100%, max-height:100%                                                |                        |
-| \_  Media overlays                                                       | undefined             | highlighting active text: background-color:yellow, color:black; fading text: undefined                           |                        |
+#+BEGIN: columnview :hlines 1 :indent 1 :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3"
+| ITEM                                                                     | SBS                                  | MTM                                                                                                                                                               | COMMENT                                                                                           |
+|--------------------------------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------|
+| Guidelines                                                               |                                      |                                                                                                                                                                   |                                                                                                   |
+| \_  Body text typography                                                 |                                      |                                                                                                                                                                   |                                                                                                   |
+| \_    Font choice                                                        | font-family:courier;                 | font-family:arial;                                                                                                                                                |                                                                                                   |
+| \_    Line spacing                                                       | line-height:1.8;                     | undefined                                                                                                                                                         | The guidelines recommend 1.4-1.5 but it doesn't seem to be defined                                |
+| \_    Paragraph spacing                                                  | undefined                            | undefined                                                                                                                                                         | The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined |
+| \_    Page margins                                                       | undefined                            | undefined                                                                                                                                                         | The guidelines state that these are defined by the reading system and do not need be defined      |
+| \_  Headings                                                             | undefined                            | font-size:[250%-100%]; font-weight:[bold-normal];  margin[^:[5em-1em] _:[2em-0em]]                                                                                |                                                                                                   |
+| \_  Pagination                                                           | display:block; margin:[^:3em _:3em]; | font-family:arial,sans-serif; font-weight:bold; display:block; text-align:right; margin-right:2em; border-top:solid 1px #E5E5E5; padding-top:2em; margin-top:3em; |                                                                                                   |
+| \_  Blockquotes                                                          | undefined                            | font-style:italic; margin; font-size:90%; margin[^:1.5em _:1.5em]; margin-left:2em;                                                                               |                                                                                                   |
+| \_  Lists                                                                | list-style-type:[circle decimal];    | margin-left:0.5em;                                                                                                                                                |                                                                                                   |
+| \_    Plain lists                                                        | undefined                            | list-style-type:none;                                                                                                                                             |                                                                                                   |
+| \_    Definition lists                                                   | undefined                            | font-weight:bold;                                                                                                                                                 |                                                                                                   |
+| \_  Text boxes                                                           | undefined                            | border:1px solid gray; background-color:#E8FBFF; margin:[^:1em _:1.5em]; padding:0.5em 1em 0.5em 1em;                                                             |                                                                                                   |
+| \_  Poems                                                                |                                      |                                                                                                                                                                   |                                                                                                   |
+| \_    Poem/verse lines                                                   | margin-left:3em;                     | font-family:times; font-size:105%;margin                                                                                                                          | why is the font Times?                                                                            |
+| \_    Line numbers                                                       | undefined                            | position:absolute; margin-left:-1.5em                                                                                                                             |                                                                                                   |
+| \_  Links                                                                | undefined                            | text-decoration:underline; a:hover:color                                                                                                                          |                                                                                                   |
+| \_  Note references                                                      | undefined                            | font-size:75%; border:1px solid;                                                                                                                                  |                                                                                                   |
+| \_  Footnotes                                                            | undefined                            | border:thin solid; padding:1em; margin:1em;                                                                                                                       |                                                                                                   |
+| \_  Endnotes                                                             | undefined                            | undefined                                                                                                                                                         |                                                                                                   |
+| \_  Computer code                                                        | font-family:courier;                 | font-family:courier;                                                                                                                                              |                                                                                                   |
+| \_  Figures                                                              | undefined                            | margin:1.5em 0 1.5em 0em; padding:0; page-break-inside:avoid                                                                                                      |                                                                                                   |
+| \_    Images                                                             | max-width:60%;                       | border:none; max-width:100%; max-height:80vh                                                                                                                      |                                                                                                   |
+| \_    Figure captions                                                    | undefined                            | font-size:0.85rem; text-indent:0; margin[^:0.5em _:0.5em]; line-height:1.3; font-family:sans-serif                                                                |                                                                                                   |
+| \_    Figure descriptions and table descriptions (extended descriptions) | undefined                            | border:1px solid #A7A7A7; background-color:white; color:black; margin[^:1em _:1em]; padding:1em                                                                   |                                                                                                   |
+| \_  Tables                                                               |                                      |                                                                                                                                                                   |                                                                                                   |
+| \_    General                                                            | undefined                            | border:2px solid gray; padding:1em; font-size:80%; margin[^:1.5em _:2em]; border-collapse:collapse                                                                |                                                                                                   |
+| \_    Heading Row                                                        | undefined                            | border:1px solid gray; font-weight:bold; text-align:left; vertical-align:top; padding:0.5em                                                                       |                                                                                                   |
+| \_    Rows                                                               | undefined                            | border:1px solid gray; padding: 0.5em                                                                                                                             |                                                                                                   |
+| \_    Captions                                                           | undefined                            | font-size:0.85rem; text-align:left; margin; line-height:1.3; font-family:sans-serif                                                                               |                                                                                                   |
+| \_    Wrapper                                                            | undefined                            | overflow-x:auto; overflow-y:auto; max-width:100%; max-height:100%                                                                                                 |                                                                                                   |
+| \_  Media overlays                                                       | undefined                            | highlighting active text: background-color:yellow; color:black; fading text: undefined                                                                            |                                                                                                   |
 #+END:
 
 * Guidelines [15/15]
@@ -51,91 +51,94 @@
 ** DONE Body text typography
 *** DONE Font choice
 :PROPERTIES:
-:MTM:      arial
-:SBS:      courier
+:MTM:      font-family:arial;
+:SBS:      font-family:courier;
 :END:
 
 *** DONE Line spacing
 :PROPERTIES:
-:SBS:      1.8
+:SBS:      line-height:1.8;
 :MTM:      undefined
+:COMMENT:  The guidelines recommend 1.4-1.5 but it doesn't seem to be defined
 :END:
 
 *** DONE Paragraph spacing
 :PROPERTIES:
 :SBS:      undefined
 :MTM:      undefined
+:COMMENT:  The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined
 :END:
 
 *** DONE Page margins
 :PROPERTIES:
 :MTM:      undefined
 :SBS:      undefined
+:COMMENT:  The guidelines state that these are defined by the reading system and do not need be defined
 :END:
 
 ** DONE Headings
 :PROPERTIES:
-:MTM:      font-size, (partially) bold, margin
+:MTM:      font-size:[250%-100%]; font-weight:[bold-normal];  margin[^:[5em-1em] _:[2em-0em]]
 :SBS:      undefined
 :END:
 
 ** DONE Pagination
 :PROPERTIES:
-:SBS:      display:block, margin
-:MTM:      display:block, margin, border-top, font-family:arial, bold
+:SBS:      display:block; margin:[^:3em _:3em];
+:MTM:      font-family:arial,sans-serif; font-weight:bold; display:block; text-align:right; margin-right:2em; border-top:solid 1px #E5E5E5; padding-top:2em; margin-top:3em; 
 :END:
 
 ** DONE Blockquotes
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      font-style:italic, margin, font-size:90%
+:MTM:      font-style:italic; margin; font-size:90%; margin[^:1.5em _:1.5em]; margin-left:2em;
 :END:
 
 ** DONE Lists
 :PROPERTIES:
-:SBS:      list-style-type
-:MTM:      margin
+:SBS:      list-style-type:[circle decimal];
+:MTM:      margin-left:0.5em;
 :END:
 
 *** DONE Plain lists
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      list-style-type:none
+:MTM:      list-style-type:none;
 :END:
 *** DONE Definition lists
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      font-weight:bold
+:MTM:      font-weight:bold;
 :END:
 
 ** DONE Text boxes
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      border, background-color, margin, padding
+:MTM:      border:1px solid gray; background-color:#E8FBFF; margin:[^:1em _:1.5em]; padding:0.5em 1em 0.5em 1em;
 :END:
 
 ** DONE Poems
 *** DONE Poem/verse lines
 :PROPERTIES:
-:SBS:      margin-left
-:MTM:      font-family:times, font-size:105%,margin
+:SBS:      margin-left:3em;
+:MTM:      font-family:times; font-size:105%;margin
 :COMMENT:  why is the font Times?
 :END:
 
 *** DONE Line numbers
 :PROPERTIES:
-:MTM:      position:absolute, margin-left:-1.5em
+:MTM:      position:absolute; margin-left:-1.5em
 :SBS:      undefined
 :END:
 
 ** DONE Links
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      text-decoration:underline, a:hover:color
+:MTM:      text-decoration:underline; a:hover:color
 :END:
 ** DONE Note references
 :PROPERTIES:
-:MTM:      font-size:75%, border:1px solid;
+:MTM:      font-size:75%; border:1px solid;
 :SBS:      undefined
 :END:
 :PROPERTIES:
@@ -154,62 +157,62 @@
 :END:
 ** DONE Computer code
 :PROPERTIES:
-:SBS:      font-family:courier
-:MTM:      font-family:courier
+:SBS:      font-family:courier;
+:MTM:      font-family:courier;
 :END:
 ** DONE Figures
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      margin:1.5em 0 1.5em 0em, padding:0, page-break-inside:avoid
+:MTM:      margin:1.5em 0 1.5em 0em; padding:0; page-break-inside:avoid
 :END:
 *** DONE Images
 :PROPERTIES:
-:SBS:      max-width: 60%
-:MTM:      border:none, max-width:100%, max-height:80vh
+:SBS:      max-width:60%;
+:MTM:      border:none; max-width:100%; max-height:80vh
 :END:
 *** DONE Figure captions
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      font-size:0.85rem, text-indent:0, margin-top:0.5em, margin-bottom:0.5em, line-height:1.3, font-family:sans-serif
+:MTM:      font-size:0.85rem; text-indent:0; margin[^:0.5em _:0.5em]; line-height:1.3; font-family:sans-serif
 :END:
 *** DONE Figure descriptions and table descriptions (extended descriptions)
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      border:1px solid #A7A7A7, background-color:white, color:black, margin-top:1em, margin-bottom:1em, padding:1em
+:MTM:      border:1px solid #A7A7A7; background-color:white; color:black; margin[^:1em _:1em]; padding:1em
 :END:
 ** DONE Tables
 *** DONE General
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      border:2px solid gray, padding:1em, font-size:80%, margin-top:1.5em, margin-bottom:2em, border-collapse:collapse
+:MTM:      border:2px solid gray; padding:1em; font-size:80%; margin[^:1.5em _:2em]; border-collapse:collapse
 :END:
 
 *** DONE Heading Row
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      border:1px solid gray, font-weight:bold, text-align:left, vertical-align:top, padding:0.5em
+:MTM:      border:1px solid gray; font-weight:bold; text-align:left; vertical-align:top; padding:0.5em
 :END:
 
 *** DONE Rows
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      border:1px solid gray, padding: 0.5em
+:MTM:      border:1px solid gray; padding: 0.5em
 :END:
 
 *** DONE Captions
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      font-size:0.85rem, text-align:left, margin, line-height:1.3, font-family:sans-serif
+:MTM:      font-size:0.85rem; text-align:left; margin; line-height:1.3; font-family:sans-serif
 :END:
 
 *** DONE Wrapper
 :PROPERTIES:
 :SBS:      undefined
-:MTM:      overflow-x:auto, overflow-y:auto, max-width:100%, max-height:100%
+:MTM:      overflow-x:auto; overflow-y:auto; max-width:100%; max-height:100%
 :END:
 ** DONE Media overlays
 :PROPERTIES:
-:MTM:      highlighting active text: background-color:yellow, color:black; fading text: undefined
+:MTM:      highlighting active text: background-color:yellow; color:black; fading text: undefined
 :SBS:      undefined
 :END:
 ** COMMENT Appendix 2: CSS examples
