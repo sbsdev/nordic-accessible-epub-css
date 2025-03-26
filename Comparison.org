@@ -147,12 +147,11 @@
 #+end_src
 
 ** DONE Blockquotes
-
-#+CAPTION: SBS CSS
+*** SBS
 #+begin_src css :tangle /tmp/sbs_blockquotes.css
 #+end_src
 
-#+CAPTION: MTM CSS
+*** MTM
 #+begin_src css :tangle /tmp/mtm_blockquotes.css
   blockquote {
     margin-top: 1.5em;
@@ -163,7 +162,7 @@
   }
 #+end_src
 
-#+CAPTION: Guidelines CSS
+*** Guidelines
 #+begin_src css :tangle /tmp/guidelines_blockquotes.css
   blockquote {
     margin-top: 1.5em;
@@ -173,7 +172,8 @@
   }
 #+end_src
 
-#+begin_src sh :results raw :wrap src diff :exports results
+*** Difference
+w#+begin_src sh :results raw :wrap src diff :exports results
   diff --unified=0 /tmp/mtm_blockquotes.css /tmp/guidelines_blockquotes.css
   :
 #+end_src
@@ -186,19 +186,13 @@
 -  font-style: italic;
 #+end_src
 
-** TODO Lists
-:PROPERTIES:
-:SBS:      list-style-type:[circle decimal];
-:MTM:      margin-left:0.5em;
-:EXAMPLE:  margin-left:0.5em;
-:COMMENT:  MTM and EXAMPLE identical
-:END:
+#+RESULTS:
 
-#+CAPTION: SBS CSS
+** TODO Lists
+*** SBS
 #+begin_src css :tangle /tmp/sbs_lists.css
 #+end_src
-
-#+CAPTION: MTM CSS
+*** MTM
 #+begin_src css :tangle /tmp/mtm_lists.css
   ol, ul {
       margin-left: 0.5em;
@@ -217,8 +211,7 @@
      margin-bottom: 0;
   }
 #+end_src
-
-#+CAPTION: Guidelines CSS
+*** Guidelines
 #+begin_src css :tangle /tmp/guidelines_lists.css
   ol, ul {
       margin-left: 0.5em;
@@ -232,13 +225,12 @@
       margin-top: 1em;
   }
 #+end_src
-
+*** Difference
 #+begin_src sh :results raw :wrap src diff :exports results
   diff --unified=0 /tmp/mtm_lists.css /tmp/guidelines_lists.css
   :
 #+end_src
 
-#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 --- /tmp/mtm_lists.css	2025-03-26 13:37:26.119621448 +0100
@@ -258,12 +250,11 @@
 :EXAMPLE:  list-style-type:none;
 :END:
 *** DONE Definition lists
-
-#+CAPTION: SBS CSS
+**** SBS
 #+begin_src css :tangle /tmp/sbs_lists_dl.css
 #+end_src
 
-#+CAPTION: MTM CSS
+**** MTM
 #+begin_src css :tangle /tmp/mtm_lists_dl.css
   dl {
      margin-top: 2em;
@@ -276,17 +267,17 @@
   }
 #+end_src
 
-#+CAPTION: Guidelines CSS
+**** Guidelines
 #+begin_src css :tangle /tmp/guidelines_lists_dl.css
   /* not defined */
 #+end_src
 
+**** Difference
 #+begin_src sh :results raw :wrap src diff :exports results
   diff --unified=0 /tmp/mtm_lists_dl.css /tmp/guidelines_lists_dl.css
   :
 #+end_src
 
-#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 --- /tmp/mtm_lists_dl.css	2025-03-26 13:43:49.779337179 +0100
@@ -304,26 +295,42 @@
 +/* not defined */
 #+end_src
 
-*** NEXT List elements
-:PROPERTIES:
-:SBS:      undefined
-:MTM:      font-weight:bold;
-:END:
-
-** DONE Text boxes
-:PROPERTIES:
-:SBS:      undefined
-:MTM:      border:1px solid gray; background-color:#E8FBFF; margin:[^:1em _:1.5em]; padding:0.5em 1em 0.5em 1em;
-:END:
-
-** DONE Poems
-*** DONE Poem/verse lines
-#+CAPTION: SBS CSS
-#+begin_src css :tangle /tmp/sbs_textboxes.css
+*** DONE List elements
+**** SBS
+#+begin_src css :tangle /tmp/sbs_lists_li.css
   /* not defined */
 #+end_src
 
-#+CAPTION: MTM CSS
+**** MTM
+#+begin_src css :tangle /tmp/mtm_lists_li.css
+  ul li, ol li {
+    margin-top: 1em;
+}
+#+end_src
+
+**** Guidelines
+#+begin_src css :tangle /tmp/guidelines_lists_li.css
+  ul li, ol li {
+      margin-top: 1em;
+  }
+#+end_src
+
+**** Difference
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_lists_li.css /tmp/guidelines_lists_li.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+#+end_src
+
+** DONE Text boxes
+*** SBS
+#+begin_src css :tangle /tmp/sbs_textboxes.css
+  /* not defined */
+#+end_src
+*** MTM
 #+begin_src css :tangle /tmp/mtm_textboxes.css
   .text-box {
       border: 1px solid gray;
@@ -340,8 +347,7 @@
       background-color: #F3F2F1;
   }
 #+end_src
-
-#+CAPTION: Guidelines CSS
+*** Guidelines
 #+begin_src css :tangle /tmp/guidelines_textboxes.css
   .text-box {
       border: 1px solid gray;
@@ -359,34 +365,38 @@
   }
 #+end_src
 
+*** Difference
 #+begin_src sh :results raw :wrap src diff :exports results
   diff --unified=0 /tmp/mtm_textboxes.css /tmp/guidelines_textboxes.css
   :
 #+end_src
 
-#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 #+end_src
 
+** TODO Poems
+*** TODO Poem/verse lines
 :PROPERTIES:
 :SBS:      margin-left:3em;
 :MTM:      font-family:times; font-size:105%;margin
+:EXAMPLE:  margin[^:1.5em; _: 1.5em; >: 2em];
 :COMMENT:  why is the font Times?
 :END:
 
-*** DONE Line numbers
+*** TODO Line numbers
 :PROPERTIES:
-:MTM:      position:absolute; margin-left:-1.5em
 :SBS:      undefined
+:MTM:      position:absolute; margin-left:-1.5em
+:EXAMPLE:  position:absolute; margin-left:-1.5em; font-weight:normal;
 :END:
 
-** DONE Links
+** TODO Links
 :PROPERTIES:
 :SBS:      undefined
 :MTM:      text-decoration:underline; a:hover:color
 :END:
-** DONE Note references
+** TODO Note references
 :PROPERTIES:
 :MTM:      font-size:75%; border:1px solid;
 :SBS:      undefined
