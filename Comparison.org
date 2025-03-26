@@ -84,6 +84,7 @@
 
 ** DONE Pagination
 
+#+CAPTION: SBS CSS
 #+begin_src css :tangle /tmp/sbs_pagination.css
   span[epub|type="pagebreak"], div[epub|type="pagebreak"]{
     display:block;
@@ -92,6 +93,7 @@
   }
 #+end_src
 
+#+CAPTION: MTM CSS
 #+begin_src css :tangle /tmp/mtm_pagination.css 
   [epub|type='pagebreak'] {
       font-family: arial, helvetica, verdana, sans-serif;
@@ -110,6 +112,7 @@
   }
 #+end_src
 
+#+CAPTION: Guidelines CSS
 #+begin_src css :tangle /tmp/guidelines_pagination.css
   [epub|type='pagebreak'] {
       font-family: arial, sans-serif;
@@ -133,6 +136,7 @@
   :
 #+end_src
 
+#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 --- /tmp/mtm_pagination.css	2025-03-26 12:07:01.066935733 +0100
@@ -144,9 +148,11 @@
 
 ** DONE Blockquotes
 
+#+CAPTION: SBS CSS
 #+begin_src css :tangle /tmp/sbs_blockquotes.css
 #+end_src
 
+#+CAPTION: MTM CSS
 #+begin_src css :tangle /tmp/mtm_blockquotes.css
   blockquote {
     margin-top: 1.5em;
@@ -157,6 +163,7 @@
   }
 #+end_src
 
+#+CAPTION: Guidelines CSS
 #+begin_src css :tangle /tmp/guidelines_blockquotes.css
   blockquote {
     margin-top: 1.5em;
@@ -171,11 +178,14 @@
   :
 #+end_src
 
+#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
---- /tmp/mtm_blockquotes.css	2025-03-26 12:17:24.301593318 +0100
-+++ /tmp/guidelines_blockquotes.css	2025-03-26 12:16:51.045589777 +0100
+--- /tmp/mtm_blockquotes.css	2025-03-26 13:48:54.459897524 +0100
++++ /tmp/guidelines_blockquotes.css	2025-03-26 13:48:54.459897524 +0100
 @@ -6 +5,0 @@
+-  font-style: italic;
+@@ -14 +12,0 @@
 -  font-style: italic;
 #+end_src
 
@@ -187,9 +197,11 @@
 :COMMENT:  MTM and EXAMPLE identical
 :END:
 
+#+CAPTION: SBS CSS
 #+begin_src css :tangle /tmp/sbs_lists.css
 #+end_src
 
+#+CAPTION: MTM CSS
 #+begin_src css :tangle /tmp/mtm_lists.css
   ol, ul {
       margin-left: 0.5em;
@@ -209,6 +221,7 @@
   }
 #+end_src
 
+#+CAPTION: Guidelines CSS
 #+begin_src css :tangle /tmp/guidelines_lists.css
   ol, ul {
       margin-left: 0.5em;
@@ -228,6 +241,7 @@
   :
 #+end_src
 
+#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 --- /tmp/mtm_lists.css	2025-03-26 13:37:26.119621448 +0100
@@ -248,9 +262,11 @@
 :END:
 *** DONE Definition lists
 
+#+CAPTION: SBS CSS
 #+begin_src css :tangle /tmp/sbs_lists_dl.css
 #+end_src
 
+#+CAPTION: MTM CSS
 #+begin_src css :tangle /tmp/mtm_lists_dl.css
   dl {
      margin-top: 2em;
@@ -263,6 +279,7 @@
   }
 #+end_src
 
+#+CAPTION: Guidelines CSS
 #+begin_src css :tangle /tmp/guidelines_lists_dl.css
   /* not defined */
 #+end_src
@@ -272,6 +289,7 @@
   :
 #+end_src
 
+#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 --- /tmp/mtm_lists_dl.css	2025-03-26 13:43:49.779337179 +0100
@@ -303,10 +321,12 @@
 
 ** DONE Poems
 *** DONE Poem/verse lines
+#+CAPTION: SBS CSS
 #+begin_src css :tangle /tmp/sbs_textboxes.css
   /* not defined */
 #+end_src
 
+#+CAPTION: MTM CSS
 #+begin_src css :tangle /tmp/mtm_textboxes.css
   .text-box {
       border: 1px solid gray;
@@ -324,6 +344,7 @@
   }
 #+end_src
 
+#+CAPTION: Guidelines CSS
 #+begin_src css :tangle /tmp/guidelines_textboxes.css
   .text-box {
       border: 1px solid gray;
@@ -346,6 +367,7 @@
   :
 #+end_src
 
+#+CAPTION: Difference between MTM and Guidelines CSS
 #+RESULTS:
 #+begin_src diff
 #+end_src
