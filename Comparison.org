@@ -83,29 +83,213 @@
 :END:
 
 ** DONE Pagination
-:PROPERTIES:
-:SBS:      display:block; margin:[^:3em _:3em];
-:MTM:      font-family:arial,sans-serif; font-weight:bold; display:block; text-align:right; margin-right:2em; border-top:solid 1px #E5E5E5; padding-top:2em; margin-top:3em; 
-:END:
+
+#+begin_src css :tangle /tmp/sbs_pagination.css
+  span[epub|type="pagebreak"], div[epub|type="pagebreak"]{
+    display:block;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/mtm_pagination.css 
+  [epub|type='pagebreak'] {
+      font-family: arial, helvetica, verdana, sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      display: block;
+      text-align: right;
+      margin-right: 2em;
+      border-top: solid 1px #E5E5E5;
+      padding-top: 2em;
+      margin-top: 3em;
+  }
+
+  [epub|type='pagebreak']:empty:before {
+      content: attr(aria-label);
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/guidelines_pagination.css
+  [epub|type='pagebreak'] {
+      font-family: arial, sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      display: block;
+      text-align: right;
+      margin-right: 2em;
+      border-top: solid 1px #E5E5E5;
+      padding-top: 2em;
+      margin-top: 3em;
+  }
+
+  [epub|type='pagebreak']:empty:before {
+      content: attr(aria-label);
+  }
+#+end_src
+
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_pagination.css /tmp/guidelines_pagination.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+--- /tmp/mtm_pagination.css	2025-03-26 12:07:01.066935733 +0100
++++ /tmp/guidelines_pagination.css	2025-03-26 12:07:01.067935734 +0100
+@@ -2 +2 @@
+-    font-family: arial, helvetica, verdana, sans-serif;
++    font-family: arial, sans-serif;
+#+end_src
 
 ** DONE Blockquotes
-:PROPERTIES:
-:SBS:      undefined
-:MTM:      font-style:italic; margin; font-size:90%; margin[^:1.5em _:1.5em]; margin-left:2em;
-:END:
 
-** DONE Lists
+#+begin_src css :tangle /tmp/sbs_blockquotes.css
+#+end_src
+
+#+begin_src css :tangle /tmp/mtm_blockquotes.css
+  blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+    font-size: 90%;
+    font-style: italic;
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/guidelines_blockquotes.css
+  blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 2em;
+    font-size: 90%;
+  }
+#+end_src
+
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_blockquotes.css /tmp/guidelines_blockquotes.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+--- /tmp/mtm_blockquotes.css	2025-03-26 12:17:24.301593318 +0100
++++ /tmp/guidelines_blockquotes.css	2025-03-26 12:16:51.045589777 +0100
+@@ -6 +5,0 @@
+-  font-style: italic;
+#+end_src
+
+** TODO Lists
 :PROPERTIES:
 :SBS:      list-style-type:[circle decimal];
 :MTM:      margin-left:0.5em;
+:EXAMPLE:  margin-left:0.5em;
+:COMMENT:  MTM and EXAMPLE identical
 :END:
 
-*** DONE Plain lists
+#+begin_src css :tangle /tmp/sbs_lists.css
+#+end_src
+
+#+begin_src css :tangle /tmp/mtm_lists.css
+  ol, ul {
+      margin-left: 0.5em;
+  }
+
+  ul.plain, ol.plain {
+      list-style-type: none;
+  }
+
+  ul li, ol li {
+      margin-top: 1em;
+  }
+
+  li p {
+     margin-top: 0;
+     margin-bottom: 0;
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/guidelines_lists.css
+  ol, ul {
+      margin-left: 0.5em;
+  }
+
+  ul.plain, ol.plain {
+      list-style-type: none;
+  }
+
+  ul li, ol li {
+      margin-top: 1em;
+  }
+#+end_src
+
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_lists.css /tmp/guidelines_lists.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+--- /tmp/mtm_lists.css	2025-03-26 13:37:26.119621448 +0100
++++ /tmp/guidelines_lists.css	2025-03-26 13:34:56.811495692 +0100
+@@ -12,5 +11,0 @@
+-
+-li p {
+-   margin-top: 0;
+-   margin-bottom: 0;
+-}
+#+end_src
+
+*** TODO Plain lists
 :PROPERTIES:
 :SBS:      undefined
 :MTM:      list-style-type:none;
+:EXAMPLE:  list-style-type:none;
 :END:
 *** DONE Definition lists
+
+#+begin_src css :tangle /tmp/sbs_lists_dl.css
+#+end_src
+
+#+begin_src css :tangle /tmp/mtm_lists_dl.css
+  dl {
+     margin-top: 2em;
+     margin-bottom: 2em;
+  }
+
+  dt {
+     margin-top: 1em; 
+     font-weight: bold;
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/guidelines_lists_dl.css
+  /* not defined */
+#+end_src
+
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_lists_dl.css /tmp/guidelines_lists_dl.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+--- /tmp/mtm_lists_dl.css	2025-03-26 13:43:49.779337179 +0100
++++ /tmp/guidelines_lists_dl.css	2025-03-26 13:48:54.461897522 +0100
+@@ -1,9 +1 @@
+-dl {
+-   margin-top: 2em;
+-   margin-bottom: 2em;
+-}
+-
+-dt {
+-   margin-top: 1em; 
+-   font-weight: bold;
+-}
++/* not defined */
+#+end_src
+
+*** NEXT List elements
 :PROPERTIES:
 :SBS:      undefined
 :MTM:      font-weight:bold;
@@ -119,6 +303,53 @@
 
 ** DONE Poems
 *** DONE Poem/verse lines
+#+begin_src css :tangle /tmp/sbs_textboxes.css
+  /* not defined */
+#+end_src
+
+#+begin_src css :tangle /tmp/mtm_textboxes.css
+  .text-box {
+      border: 1px solid gray;
+      background-color: #E8FBFF;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+  }
+
+  aside.text-box {
+      background-color: #F3F2F1;
+  }
+#+end_src
+
+#+begin_src css :tangle /tmp/guidelines_textboxes.css
+  .text-box {
+      border: 1px solid gray;
+      background-color: #E8FBFF;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+  }
+
+  aside.text-box {
+      background-color: #F3F2F1;
+  }
+#+end_src
+
+#+begin_src sh :results raw :wrap src diff :exports results
+  diff --unified=0 /tmp/mtm_textboxes.css /tmp/guidelines_textboxes.css
+  :
+#+end_src
+
+#+RESULTS:
+#+begin_src diff
+#+end_src
+
 :PROPERTIES:
 :SBS:      margin-left:3em;
 :MTM:      font-family:times; font-size:105%;margin
