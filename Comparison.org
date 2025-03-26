@@ -173,7 +173,7 @@
 #+end_src
 
 *** Difference
-w#+begin_src sh :results raw :wrap src diff :exports results
+#+begin_src sh :results raw :wrap src diff :exports results
   diff --unified=0 /tmp/mtm_blockquotes.css /tmp/guidelines_blockquotes.css
   :
 #+end_src
