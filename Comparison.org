@@ -43,21 +43,21 @@
 :COMMENT:  Is no font recommended in the guidelines?
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_table_font.css
+#+begin_src css :tangle /tmp/sbs_table_font.css :eval no
   * {
     font-family:Verdana, Arial, sans-serif !important;
   }
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_table_font.css
+#+begin_src css :tangle /tmp/mtm_table_font.css :eval no
 body {
     font-family: arial, helvetica, verdana, sans-serif;
 }
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_table_font.css
+#+begin_src css :tangle /tmp/guidelines_table_font.css :eval no
   /* not defined */
 #+end_src
 
@@ -83,7 +83,7 @@ body {
 :COMMENT:  The guidelines recommend 1.4-1.5 but it doesn't seem to be defined
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_line_spacing.css
+#+begin_src css :tangle /tmp/sbs_line_spacing.css :eval no
   body {
     /* normal line height is 1.2
      (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Values).
@@ -106,12 +106,12 @@ body {
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_line_spacing.css
+#+begin_src css :tangle /tmp/mtm_line_spacing.css :eval no
   /* not defined */
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_line_spacing.css
+#+begin_src css :tangle /tmp/guidelines_line_spacing.css :eval no
   /* A line spacing between 1.4 and 1.5 is recommended */
 #+end_src
 
@@ -135,17 +135,17 @@ body {
 :COMMENT:  The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_paragraph_spacing.css
+#+begin_src css :tangle /tmp/sbs_paragraph_spacing.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_paragraph_spacing.css
+#+begin_src css :tangle /tmp/mtm_paragraph_spacing.css :eval no
   /* not defined */
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_paragraph_spacing.css
+#+begin_src css :tangle /tmp/guidelines_paragraph_spacing.css :eval no
   /* Some spacing between paragraphs is recommended */
 #+end_src
 
@@ -169,7 +169,7 @@ body {
 :COMMENT:  The guidelines state that these are defined by the reading system and do not need be defined
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_page_margin.css
+#+begin_src css :tangle /tmp/sbs_page_margin.css :eval no
   body {
       margin:auto 0;
       padding:0 100;
@@ -177,7 +177,7 @@ body {
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_page_margin.css
+#+begin_src css :tangle /tmp/mtm_page_margin.css :eval no
   body {
       margin-left: 10%;
       margin-right: 10%;
@@ -185,7 +185,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_page_margin.css
+#+begin_src css :tangle /tmp/guidelines_page_margin.css :eval no
   /* Page margins are defined by the reading system */
 #+end_src
 
@@ -212,12 +212,12 @@ body {
 :COMMENT:  The guidelines make no specific recommendations
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_headings.css
+#+begin_src css :tangle /tmp/sbs_headings.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_headings.css
+#+begin_src css :tangle /tmp/mtm_headings.css :eval no
   h1.title {
      font-size: 250%;
      font-style: normal;
@@ -270,7 +270,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_headings.css
+#+begin_src css :tangle /tmp/guidelines_headings.css :eval no
   /* not defined */
 #+end_src
 
@@ -342,7 +342,7 @@ body {
 :COMMENT:  Minor difference
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_pagination.css
+#+begin_src css :tangle /tmp/sbs_pagination.css :eval no
   span[epub|type="pagebreak"], div[epub|type="pagebreak"]{
     display:block;
     margin-top: 3em;
@@ -351,7 +351,7 @@ body {
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_pagination.css 
+#+begin_src css :tangle /tmp/mtm_pagination.css  :eval no
   [epub|type='pagebreak'] {
       font-family: arial, helvetica, verdana, sans-serif;
       font-weight: bold;
@@ -370,7 +370,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_pagination.css
+#+begin_src css :tangle /tmp/guidelines_pagination.css :eval no
   [epub|type='pagebreak'] {
       font-family: arial, sans-serif;
       font-weight: bold;
@@ -408,12 +408,12 @@ body {
 :COMMENT:  MTM has italic font
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_blockquotes.css
+#+begin_src css :tangle /tmp/sbs_blockquotes.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_blockquotes.css
+#+begin_src css :tangle /tmp/mtm_blockquotes.css :eval no
   blockquote {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -424,7 +424,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_blockquotes.css
+#+begin_src css :tangle /tmp/guidelines_blockquotes.css :eval no
   blockquote {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -452,7 +452,7 @@ body {
 :COMMENT:  Minor differences
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_lists.css
+#+begin_src css :tangle /tmp/sbs_lists.css :eval no
   ol {
       list-style-type: decimal;
   }
@@ -462,7 +462,7 @@ body {
   }
 #+end_src
 *** MTM
-#+begin_src css :tangle /tmp/mtm_lists.css
+#+begin_src css :tangle /tmp/mtm_lists.css :eval no
   ol, ul {
       margin-left: 0.5em;
   }
@@ -485,7 +485,7 @@ body {
   }
 #+end_src
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_lists.css
+#+begin_src css :tangle /tmp/guidelines_lists.css :eval no
   ol, ul {
       margin-left: 0.5em;
   }
@@ -525,12 +525,12 @@ body {
 :COMMENT:  Not defined in guidelines
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_lists_dl.css
+#+begin_src css :tangle /tmp/sbs_lists_dl.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_lists_dl.css
+#+begin_src css :tangle /tmp/mtm_lists_dl.css :eval no
   dl {
      margin-top: 2em;
      margin-bottom: 2em;
@@ -543,7 +543,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_lists_dl.css
+#+begin_src css :tangle /tmp/guidelines_lists_dl.css :eval no
   /* not defined */
 #+end_src
 
@@ -572,19 +572,19 @@ body {
 
 *** DONE List elements
 **** SBS
-#+begin_src css :tangle /tmp/sbs_lists_li.css
+#+begin_src css :tangle /tmp/sbs_lists_li.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_lists_li.css
+#+begin_src css :tangle /tmp/mtm_lists_li.css :eval no
   ul li, ol li {
     margin-top: 1em;
 }
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_lists_li.css
+#+begin_src css :tangle /tmp/guidelines_lists_li.css :eval no
   ul li, ol li {
       margin-top: 1em;
   }
@@ -602,11 +602,11 @@ body {
 
 ** DONE Text boxes
 *** SBS
-#+begin_src css :tangle /tmp/sbs_textboxes.css
+#+begin_src css :tangle /tmp/sbs_textboxes.css :eval no
   /* not defined */
 #+end_src
 *** MTM
-#+begin_src css :tangle /tmp/mtm_textboxes.css
+#+begin_src css :tangle /tmp/mtm_textboxes.css :eval no
   .text-box {
       border: 1px solid gray;
       background-color: #E8FBFF;
@@ -623,7 +623,7 @@ body {
   }
 #+end_src
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_textboxes.css
+#+begin_src css :tangle /tmp/guidelines_textboxes.css :eval no
   .text-box {
       border: 1px solid gray;
       background-color: #E8FBFF;
@@ -656,7 +656,7 @@ body {
 :COMMENT:  MTM uses Times New Roman as the font. Why?
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_poem.css
+#+begin_src css :tangle /tmp/sbs_poem.css :eval no
   .poem{
     margin-left:3em;
   }
@@ -666,7 +666,7 @@ body {
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_poem.css
+#+begin_src css :tangle /tmp/mtm_poem.css :eval no
   div.verse {
       font-family: 'times new roman', serif ;
       font-size: 105%;
@@ -698,7 +698,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_poem.css
+#+begin_src css :tangle /tmp/guidelines_poem.css :eval no
   div.verse {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
@@ -760,17 +760,17 @@ body {
 :COMMENT:  The guidelines recommend some CSS which MTM doesn't use
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_poem_blockquote.css
+#+begin_src css :tangle /tmp/sbs_poem_blockquote.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_poem_blockquote.css
+#+begin_src css :tangle /tmp/mtm_poem_blockquote.css :eval no
   /* not defined */
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_poem_blockquote.css
+#+begin_src css :tangle /tmp/guidelines_poem_blockquote.css :eval no
   blockquote div.verse {
       margin-top: 0;
       margin-left: 0.5em;
@@ -807,12 +807,12 @@ body {
 
 *** DONE Line numbers
 **** SBS
-#+begin_src css :tangle /tmp/sbs_linenum.css
+#+begin_src css :tangle /tmp/sbs_linenum.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_linenum.css
+#+begin_src css :tangle /tmp/mtm_linenum.css :eval no
   span.linenum{
      position: absolute;
      margin-left: -1.5em;
@@ -821,7 +821,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_linenum.css
+#+begin_src css :tangle /tmp/guidelines_linenum.css :eval no
   span.linenum{
       position: absolute;
       margin-left: -1.5em;
@@ -844,12 +844,12 @@ body {
 :COMMENT:  Why is the selector '* a' better than 'a'? I believe it is not
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_links.css
+#+begin_src css :tangle /tmp/sbs_links.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_links.css 
+#+begin_src css :tangle /tmp/mtm_links.css  :eval no
   * a {
       text-decoration: underline;
   }
@@ -862,7 +862,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_links.css
+#+begin_src css :tangle /tmp/guidelines_links.css :eval no
   a {
       text-decoration: underline;
   }
@@ -894,12 +894,12 @@ body {
 :COMMENT:  role name should probably be quoted
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_noterefs.css
+#+begin_src css :tangle /tmp/sbs_noterefs.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_noterefs.css
+#+begin_src css :tangle /tmp/mtm_noterefs.css :eval no
   a[role=doc-noteref] {
      font-family: arial, helvetica, verdana, sans-serif;
      vertical-align: super;
@@ -910,7 +910,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_noterefs.css
+#+begin_src css :tangle /tmp/guidelines_noterefs.css :eval no
   a[role="doc-noteref"] {
       font-family: arial, helvetica, verdana, sans-serif;
       vertical-align: super;
@@ -940,12 +940,12 @@ body {
 :COMMENT:  MTM defines backlink
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_footnotes.css
+#+begin_src css :tangle /tmp/sbs_footnotes.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_footnotes.css
+#+begin_src css :tangle /tmp/mtm_footnotes.css :eval no
   a[role="doc-backlink"] {
      font-size: 75%;
      text-decoration: none;
@@ -960,7 +960,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_footnotes.css
+#+begin_src css :tangle /tmp/guidelines_footnotes.css :eval no
   aside[role="doc-footnote"] {
     border: thin #FF0000 solid;
     padding: 1em;
@@ -992,17 +992,17 @@ body {
 :COMMENT:  Not defined in MTM CSS
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_endnotes.css
+#+begin_src css :tangle /tmp/sbs_endnotes.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_endnotes.css
+#+begin_src css :tangle /tmp/mtm_endnotes.css :eval no
   /* not defined */
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_endnotes.css
+#+begin_src css :tangle /tmp/guidelines_endnotes.css :eval no
   section[role=doc-endnotes] ol {
       padding-left: 1.2em;
       font-size: 0.85em;
@@ -1029,7 +1029,7 @@ body {
 
 ** DONE Computer code
 *** SBS
-#+begin_src css :tangle /tmp/sbs_code.css
+#+begin_src css :tangle /tmp/sbs_code.css :eval no
   code,
   pre{
     font-family:"Courier New", Courier, monospace !important;
@@ -1037,7 +1037,7 @@ body {
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_code.css
+#+begin_src css :tangle /tmp/mtm_code.css :eval no
   code {
       font-family: courier, monospace;
   }
@@ -1049,7 +1049,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_code.css
+#+begin_src css :tangle /tmp/guidelines_code.css :eval no
   code {
       font-family: courier, monospace;
   }
@@ -1072,11 +1072,11 @@ body {
 
 ** DONE Figures
 *** SBS
-#+begin_src css :tangle /tmp/sbs_figures.css
+#+begin_src css :tangle /tmp/sbs_figures.css :eval no
   /* not defined */
 #+end_src
 *** MTM
-#+begin_src css :tangle /tmp/mtm_figures.css
+#+begin_src css :tangle /tmp/mtm_figures.css :eval no
   figure {
       margin: 1.5em 0 1.5em 0em;
       padding: 0;
@@ -1084,7 +1084,7 @@ body {
   }
 #+end_src
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_figures.css
+#+begin_src css :tangle /tmp/guidelines_figures.css :eval no
   figure {
       margin: 1.5em 0 1.5em 0em;
       padding: 0;
@@ -1106,7 +1106,7 @@ body {
 :COMMENT:  MTM disables the border
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_images.css
+#+begin_src css :tangle /tmp/sbs_images.css :eval no
   img {
       max-width: 60%;
   }
@@ -1116,7 +1116,7 @@ body {
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_images.css
+#+begin_src css :tangle /tmp/mtm_images.css :eval no
   img {
       border: none;
       max-width: 100%;
@@ -1125,7 +1125,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_images.css
+#+begin_src css :tangle /tmp/guidelines_images.css :eval no
   img {
       max-width: 100%;
       max-height: 80vh; /* to leave room for the caption */
@@ -1151,12 +1151,12 @@ body {
 :COMMENT:  Guidelines have two examples. One sets the font to italics
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_figcaptions.css
+#+begin_src css :tangle /tmp/sbs_figcaptions.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_figcaptions.css
+#+begin_src css :tangle /tmp/mtm_figcaptions.css :eval no
   figcaption {
       font-size: 0.85rem;
       text-indent: 0;
@@ -1168,7 +1168,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_figcaptions.css
+#+begin_src css :tangle /tmp/guidelines_figcaptions.css :eval no
   figcaption {
       font-style: italic;
       margin-bottom: 2em;
@@ -1216,12 +1216,12 @@ body {
 :COMMENT:  Minor difference
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_asides.css
+#+begin_src css :tangle /tmp/sbs_asides.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_asides.css
+#+begin_src css :tangle /tmp/mtm_asides.css :eval no
   aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
       border: 1px solid #A7A7A7;
       background-color: white;
@@ -1241,7 +1241,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_asides.css
+#+begin_src css :tangle /tmp/guidelines_asides.css :eval no
   aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
       border: 1px solid #A7A7A7;
       background-color: white;
@@ -1281,12 +1281,12 @@ body {
 :COMMENT:  Guidelines define separate captions and table captions. They do not seem very similar
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_table.css
+#+begin_src css :tangle /tmp/sbs_table.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_table.css
+#+begin_src css :tangle /tmp/mtm_table.css :eval no
   table {
       border: 2px solid gray;
       padding: 1em;
@@ -1320,7 +1320,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_table.css
+#+begin_src css :tangle /tmp/guidelines_table.css :eval no
   table {
       border: 2px solid gray;
       padding: 1em;
@@ -1377,12 +1377,12 @@ body {
 :COMMENT:  Notable differences between MTM and guidelines
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_table_caption.css
+#+begin_src css :tangle /tmp/sbs_table_caption.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_table_caption.css
+#+begin_src css :tangle /tmp/mtm_table_caption.css :eval no
   table caption {
       font-size: 0.85rem;
       text-align: left;
@@ -1394,7 +1394,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_table_caption.css
+#+begin_src css :tangle /tmp/guidelines_table_caption.css :eval no
   caption {
       font-weight: 700;
       text-align: left;
@@ -1433,12 +1433,12 @@ body {
 
 *** DONE Wrapper
 **** SBS
-#+begin_src css :tangle /tmp/sbs_table_wrapper.css
+#+begin_src css :tangle /tmp/sbs_table_wrapper.css :eval no
   /* not defined */
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_table_wrapper.css
+#+begin_src css :tangle /tmp/mtm_table_wrapper.css :eval no
   div.table-wrapper {
       overflow-x: auto;
       overflow-y: auto;
@@ -1448,7 +1448,7 @@ body {
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_table_wrapper.css
+#+begin_src css :tangle /tmp/guidelines_table_wrapper.css :eval no
   div.table-wrapper {
       overflow-x: auto;
       overflow-y: auto;
@@ -1472,12 +1472,12 @@ body {
 :COMMENT:  Minor difference
 :END:
 *** SBS
-#+begin_src css :tangle /tmp/sbs_media_overlays.css
+#+begin_src css :tangle /tmp/sbs_media_overlays.css :eval no
   /* not defined */
 #+end_src
 
 *** MTM
-#+begin_src css :tangle /tmp/mtm_media_overlays.css
+#+begin_src css :tangle /tmp/mtm_media_overlays.css :eval no
   .my-active-item {
       background-color: yellow;
       color: black !important;
@@ -1485,7 +1485,7 @@ body {
 #+end_src
 
 *** Guidelines
-#+begin_src css :tangle /tmp/guidelines_media_overlays.css
+#+begin_src css :tangle /tmp/guidelines_media_overlays.css :eval no
   .my-active-item {
       background-color: yellow;
       color: black !important;
@@ -1521,7 +1521,7 @@ body {
 :CUSTOM_ID:       pagination_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   [epub|type='pagebreak'] {
       font-family: arial, sans-serif;
       font-weight: bold;
@@ -1544,7 +1544,7 @@ body {
 :CUSTOM_ID:       blockquotes_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   blockquote {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
@@ -1558,7 +1558,7 @@ body {
 :CUSTOM_ID:       blockquotes_emph_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   blockquote {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
@@ -1577,7 +1577,7 @@ body {
 :CUSTOM_ID:       lists_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   ol, ul {
       margin-left: 0.5em;
   }
@@ -1596,7 +1596,7 @@ body {
 :CUSTOM_ID:       text-box_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   .text-box {
       border: 1px solid gray;
       background-color: #E8FBFF;
@@ -1618,7 +1618,7 @@ body {
 :CUSTOM_ID:       poems_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   div.verse {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
@@ -1653,7 +1653,7 @@ body {
 :PROPERTIES:
 :CUSTOM_ID:       line-number_ref
 :END:
-#+begin_src css
+#+begin_src css :eval no
   span.linenum{
       position: absolute;
       margin-left: -1.5em;
@@ -1665,7 +1665,7 @@ body {
 :PROPERTIES:
 :CUSTOM_ID:       link_ref
 :END:
-#+begin_src css
+#+begin_src css :eval no
   a {
       text-decoration: underline;
   }
@@ -1682,7 +1682,7 @@ body {
 :CUSTOM_ID:       note_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   a[role="doc-noteref"] {
       font-family: arial, helvetica, verdana, sans-serif;
       vertical-align: super;
@@ -1709,7 +1709,7 @@ body {
 :CUSTOM_ID:       footnote_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   aside[role="doc-footnote"] {
       border: thin #FF0000 solid;
       padding: 1em;
@@ -1722,7 +1722,7 @@ body {
 :CUSTOM_ID:       endnote_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   section[role=doc-endnotes] ol {
       padding-left: 1.2em;
       font-size: 0.85em;
@@ -1734,7 +1734,7 @@ body {
 :CUSTOM_ID:       code_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   code {
       font-family: courier, monospace;
   }
@@ -1750,7 +1750,7 @@ body {
 :CUSTOM_ID:       figure_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   figure {
       margin: 1.5em 0 1.5em 0em;
       padding: 0;
@@ -1763,7 +1763,7 @@ body {
 :CUSTOM_ID:       image_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   img {
       max-width: 100%;
       max-height: 80vh; /* to leave room for the caption */
@@ -1775,7 +1775,7 @@ body {
 :CUSTOM_ID:       fig-caps_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   figcaption {
       font-style: italic;
       margin-bottom: 2em;
@@ -1795,7 +1795,7 @@ body {
 :CUSTOM_ID:       fig-desc_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
       border: 1px solid #A7A7A7;
       background-color: white;
@@ -1816,7 +1816,7 @@ body {
 :CUSTOM_ID:       table_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   table {
       border: 2px solid gray;
       padding: 1em;
@@ -1851,7 +1851,7 @@ body {
 :CUSTOM_ID:       table-caps_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   caption {
       font-weight: 700;
       text-align: left;
@@ -1867,7 +1867,7 @@ body {
 :CUSTOM_ID:       table-wrapper_ref
 :END:
 
-#+begin_src css
+#+begin_src css :eval no
   div.table-wrapper {
       overflow-x: auto;
       /* workaround for Calibre: add a vertical scrollbar
@@ -1882,7 +1882,7 @@ body {
 :PROPERTIES:
 :CUSTOM_ID:       media-css_ref
 :END:
-#+begin_src css
+#+begin_src css :eval no
   /* for highlighting active text */
 
   .my-active-item {
