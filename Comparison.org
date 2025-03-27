@@ -6,25 +6,13 @@
 #+COLUMNS: %ITEM %COMMENT
 
 * Comparison
-#+BEGIN: columnview :hlines 1 :indent 1 :maxlevel 2 :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3"
-| ITEM                     | COMMENT |
-|--------------------------+---------|
-| Guidelines               |         |
-| \_  Body text typography |         |
-| \_  Headings             |         |
-| \_  Pagination           |         |
-| \_  Blockquotes          |         |
-| \_  Lists                |         |
-| \_  Text boxes           |         |
-| \_  Poems                |         |
-| \_  Links                |         |
-| \_  Note references      |         |
-| \_  Footnotes            |         |
-| \_  Endnotes             |         |
-| \_  Computer code        |         |
-| \_  Figures              |         |
-| \_  Tables               |         |
-| \_  Media overlays       |         |
+#+BEGIN: columnview :hlines 1 :indent 1 :skip-empty-rows t :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3"
+| ITEM                    | COMMENT                                                                                           |
+|-------------------------+---------------------------------------------------------------------------------------------------|
+| \_    Line spacing      | The guidelines recommend 1.4-1.5 but it doesn't seem to be defined                                |
+| \_    Paragraph spacing | The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined |
+| \_    Page margins      | The guidelines state that these are defined by the reading system and do not need be defined      |
+| \_    Poem/verse lines  | why is the font Times?                                                                            |
 #+END:
 
 * Guidelines [15/15]
