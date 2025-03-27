@@ -9,10 +9,15 @@
 #+BEGIN: columnview :hlines 1 :indent 1 :skip-empty-rows t :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3"
 | ITEM                    | COMMENT                                                                                           |
 |-------------------------+---------------------------------------------------------------------------------------------------|
+| \_    Font choice       | Is no font recommended in the guidelines?                                                         |
 | \_    Line spacing      | The guidelines recommend 1.4-1.5 but it doesn't seem to be defined                                |
 | \_    Paragraph spacing | The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined |
 | \_    Page margins      | The guidelines state that these are defined by the reading system and do not need be defined      |
+| \_  Pagination          | Minor difference                                                                                  |
+| \_  Blockquotes         | MTM has italic font                                                                               |
 | \_    Poem/verse lines  | why is the font Times?                                                                            |
+| \_  Footnotes           | MTM defines backlink                                                                              |
+| \_  Endnotes            | Not defined in MTM CSS                                                                            |
 #+END:
 
 * Guidelines [15/15]
@@ -22,40 +27,13 @@
 :END:
 ** DONE Body text typography
 *** DONE Font choice
+:PROPERTIES:
+:COMMENT:  Is no font recommended in the guidelines?
+:END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_table_font.css
   * {
     font-family:Verdana, Arial, sans-serif !important;
-  }
-
-  /* Use an off-white background. Some users need high
-     contrast for better reading. Some need low contrast. A
-     happy medium would be off white to reduce "glare" and
-     black text. Anyone that needs a greater extreme likely
-     overrides stylesheets. The text is colored dark blue to
-     assist with "glare" issues, but also to make the black
-     symbols subtly stand out. */
-  body {
-    /* normal line height is 1.2
-     (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Values).
-
-     W3C recommends "Line spacing (leading) is at least space-and-a-half
-     within paragraphs"
-     (https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation).
-
-     MDN Web Docs recommends: "Use a minimum value of 1.5 for
-     line-height for main paragraph content. This will help people
-     experiencing low vision conditions, as well as people with
-     cognitive concerns such as Dyslexia. If the page is zoomed to
-     increase the text size, using a unitless value ensures that the
-     line height will scale proportionately
-     (https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Accessibility_concerns).
-
-     So we multiply 1.2 by 1.5 which results in 1.8. */
-    line-height:1.8;
-    margin:auto 0;
-    padding:0 100;
-    color:#1A0033;
   }
 #+end_src
 
@@ -63,13 +41,12 @@
 #+begin_src css :tangle /tmp/mtm_table_font.css
 body {
     font-family: arial, helvetica, verdana, sans-serif;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 #+end_src
 
 **** Guidelines
 #+begin_src css :tangle /tmp/guidelines_table_font.css
+  /* not defined */
 #+end_src
 
 **** Difference
@@ -348,6 +325,9 @@ body {
 #+end_src
 
 ** DONE Pagination
+:PROPERTIES:
+:COMMENT:  Minor difference
+:END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_pagination.css
   span[epub|type="pagebreak"], div[epub|type="pagebreak"]{
@@ -411,6 +391,9 @@ body {
 #+end_src
 
 ** DONE Blockquotes
+:PROPERTIES:
+:COMMENT:  MTM has italic font
+:END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_blockquotes.css
   /* not defined */
@@ -925,6 +908,9 @@ body {
 #+end_src
 
 ** DONE Footnotes
+:PROPERTIES:
+:COMMENT:  MTM defines backlink
+:END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_footnotes.css
   /* not defined */
@@ -974,6 +960,9 @@ body {
 #+end_src
 
 ** DONE Endnotes
+:PROPERTIES:
+:COMMENT:  Not defined in MTM CSS
+:END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_endnotes.css
   /* not defined */
