@@ -43,34 +43,34 @@
 :COMMENT:  Is no font recommended in the guidelines?
 :END:
 **** SBS
-#+begin_src css :tangle /tmp/sbs_table_font.css :eval no
+#+begin_src css :tangle /tmp/sbs_font.css :eval no
   * {
     font-family:Verdana, Arial, sans-serif !important;
   }
 #+end_src
 
 **** MTM
-#+begin_src css :tangle /tmp/mtm_table_font.css :eval no
+#+begin_src css :tangle /tmp/mtm_font.css :eval no
 body {
     font-family: arial, helvetica, verdana, sans-serif;
 }
 #+end_src
 
 **** Guidelines
-#+begin_src css :tangle /tmp/guidelines_table_font.css :eval no
+#+begin_src css :tangle /tmp/guidelines_font.css :eval no
   /* not defined */
 #+end_src
 
 **** Difference
 #+begin_src sh :results raw :wrap src diff :exports results
-  diff --unified=0 /tmp/mtm_table_font.css /tmp/guidelines_table_font.css
+  diff --unified=0 /tmp/mtm_font.css /tmp/guidelines_font.css
   :
 #+end_src
 
 #+RESULTS:
 #+begin_src diff
---- /tmp/mtm_table_font.css	2025-03-27 13:07:41.717532809 +0100
-+++ /tmp/guidelines_table_font.css	2025-03-27 13:07:41.717532809 +0100
+--- /tmp/mtm_font.css	2025-03-28 13:49:33.846143390 +0100
++++ /tmp/guidelines_font.css	2025-03-28 13:49:33.846143390 +0100
 @@ -1,3 +1 @@
 -body {
 -    font-family: arial, helvetica, verdana, sans-serif;
