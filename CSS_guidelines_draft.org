@@ -562,6 +562,23 @@ Accessible]]
   }
 #+end_src
 
+#+begin_src css
+  dl {
+      margin-top: 2em;
+      margin-bottom: 2em;
+  }
+
+  dt {
+      margin-top: 1em;
+      font-weight: bold;
+  }
+
+  dl + dl {
+      margin-top: 1.5em;
+      padding-top: 1em;
+  }
+#+end_src
+
 ** CSS example: Text-boxes
 :PROPERTIES:
 :CUSTOM_ID:       text-box_ref
