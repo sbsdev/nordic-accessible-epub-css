@@ -468,7 +468,7 @@ Note: Not a recommendation to use these specifically
 
 Examples with more accessible characteristics: Georgia, Sabon
 
-** Typographic layout and styling (from Vision Australia webinar)
+** Typographic layout and styling
 - Create visual hierarchy with variations in font weight and size
 - Avoid italics
 - Headings should be sized relative to body text
