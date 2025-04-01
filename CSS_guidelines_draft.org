@@ -849,6 +849,18 @@ Accessible]]
   }
 #+end_src
 
+** CSS example: Math
+:PROPERTIES:
+:CUSTOM_ID:       math_ref
+:END:
+
+#+begin_src css
+    math[display~='block'] {
+      overflow-x: auto;
+      overflow-y: hidden;
+  }
+#+end_src
+
 ** CSS example: Media overlays - CSS
 :PROPERTIES:
 :CUSTOM_ID:       media-css_ref
