@@ -666,7 +666,7 @@ Accessible]]
      (usually blue, underline); it would be a good idea to define link
      styling elsewhere in the stylesheet */
 
-  a[role=doc-noteref] {
+  a[role="doc-noteref"] {
       vertical-align: baseline;
       position: relative;
       top: -0.4em;
@@ -700,7 +700,7 @@ Accessible]]
 :END:
 
 #+begin_src css
-  section[role=doc-endnotes] ol {
+  section[role="doc-endnotes"] ol {
       padding-left: 1.2em;
       font-size: 0.85em;
   }
