@@ -74,7 +74,7 @@ p.indented {
 }
 
 /* --- LINKS --- */
-* a {
+a {
    text-decoration: underline;
 }
 
