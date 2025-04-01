@@ -368,8 +368,8 @@ pre {
 
 /* --- MATHCAT --- */
 math[display~='block'] {
-overflow-x: auto;
-overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 /* --- MISC INLINES --- */
