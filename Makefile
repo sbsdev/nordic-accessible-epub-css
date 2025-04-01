@@ -1,5 +1,5 @@
 
-SOURCE = CSS_guidelines_draft.org
+SOURCE = CSS_guidelines.org
 
 PDF = $(patsubst %.org, %.pdf, $(SOURCE))
 DOCX = $(patsubst %.org, %.docx, $(SOURCE))
