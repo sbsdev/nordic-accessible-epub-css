@@ -681,6 +681,12 @@ Accessible]]
 :END:
 
 #+begin_src css
+  a[role="doc-backlink"] {
+      font-size: 85%;
+      text-decoration: none;
+      border: 1px solid #FF0000;
+  }
+
   aside[role="doc-footnote"] {
       border: thin #FF0000 solid;
       padding: 1em;
