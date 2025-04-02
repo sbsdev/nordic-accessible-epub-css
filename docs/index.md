@@ -5,8 +5,10 @@ author: "Oscar Lagerström Carlsson, Christian Egli, Jonas Lillqvist, Linda Lind
 ---
 
 # {{ page.title }}
+
+{{ page.author }}
+
 {{ page.date }}
-By {{ page.author }}
 
 # Introduction
 
