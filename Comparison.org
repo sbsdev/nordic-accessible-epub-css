@@ -3,33 +3,33 @@
 #+author: Christian Egli
 #+email: christian.egli@sbs.ch
 #+language: en
-#+COLUMNS: %ITEM %COMMENT
+#+COLUMNS: %ITEM %COMMENT %RESOLUTION
 
 * Comparison
 #+BEGIN: columnview :hlines 1 :indent 1 :skip-empty-rows t :id "45a702c0-969f-49fc-8f05-21c6c6e23cd3"
-| ITEM                                                                     | COMMENT                                                                                           |
-|--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------|
-| \_    Font choice                                                        | Is no font recommended in the guidelines?                                                         |
-| \_    Line spacing                                                       | The guidelines recommend 1.4-1.5 but it doesn't seem to be defined                                |
-| \_    Paragraph spacing                                                  | The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined |
-| \_    Page margins                                                       | The guidelines state that these are defined by the reading system and do not need be defined      |
-| \_  Headings                                                             | The guidelines make no specific recommendations                                                   |
-| \_  Pagination                                                           | Minor difference                                                                                  |
-| \_  Blockquotes                                                          | MTM has italic font                                                                               |
-| \_  Lists                                                                | Minor differences                                                                                 |
-| \_    Definition lists                                                   | Not defined in guidelines                                                                         |
-| \_    Poem/verse lines                                                   | MTM uses Times New Roman as the font. Why?                                                        |
-| \_    Poem inside blockquote                                             | The guidelines recommend some CSS which MTM doesn't use                                           |
-| \_  Links                                                                | Why is the selector '* a' better than 'a'? I believe it is not                                    |
-| \_  Note references                                                      | role name should probably be quoted                                                               |
-| \_  Footnotes                                                            | MTM defines backlink                                                                              |
-| \_  Endnotes                                                             | Not defined in MTM CSS                                                                            |
-| \_    Images                                                             | MTM disables the border                                                                           |
-| \_    Figure captions                                                    | Guidelines have two examples. One sets the font to italics                                        |
-| \_    Figure descriptions and table descriptions (extended descriptions) | Minor difference                                                                                  |
-| \_    General                                                            | Guidelines define separate captions and table captions. They do not seem very similar             |
-| \_    Captions                                                           | Notable differences between MTM and guidelines                                                    |
-| \_  Media overlays                                                       | Minor difference                                                                                  |
+| ITEM                                                                     | COMMENT                                                                                           | RESOLUTION                                                                           |
+|--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------|
+| \_    Font choice                                                        | Is no font recommended in the guidelines?                                                         | No, no specific font is recommended                                                  |
+| \_    Line spacing                                                       | The guidelines recommend 1.4-1.5 but it doesn't seem to be defined                                | Added an issue (#3). MTM will look into it                                           |
+| \_    Paragraph spacing                                                  | The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined | The browser default is good enough                                                   |
+| \_    Page margins                                                       | The guidelines state that these are defined by the reading system and do not need be defined      | No need to define                                                                    |
+| \_  Headings                                                             | The guidelines make no specific recommendations                                                   |                                                                                      |
+| \_  Pagination                                                           | Minor difference                                                                                  |                                                                                      |
+| \_  Blockquotes                                                          | MTM has italic font                                                                               | For backwards compatibility                                                          |
+| \_  Lists                                                                | Minor differences                                                                                 |                                                                                      |
+| \_    Definition lists                                                   | Not defined in guidelines                                                                         | Added an example                                                                     |
+| \_    Poem/verse lines                                                   | MTM uses Times New Roman as the font. Why?                                                        | For backwards compatibility                                                          |
+| \_    Poem inside blockquote                                             | The guidelines recommend some CSS which MTM doesn't use                                           | MTM will add it to their CSS                                                         |
+| \_  Links                                                                | Why is the selector '* a' better than 'a'? I believe it is not                                    | Fixed in CSS                                                                         |
+| \_  Note references                                                      | role name should probably be quoted                                                               | Fixed in CSS                                                                         |
+| \_  Footnotes                                                            | MTM defines backlink                                                                              | Added an example                                                                     |
+| \_  Endnotes                                                             | Not defined in MTM CSS                                                                            | MTM doesn't use endnotes                                                             |
+| \_    Images                                                             | MTM disables the border                                                                           | Minor difference                                                                     |
+| \_    Figure captions                                                    | Guidelines have two examples. One sets the font to italics                                        | It is fine to have more than one example and to set the font. They are just examples |
+| \_    Figure descriptions and table descriptions (extended descriptions) | Minor difference                                                                                  |                                                                                      |
+| \_    General                                                            | Guidelines define separate captions and table captions. They do not seem very similar             | Table captions are indeed different than general captions                            |
+| \_    Captions                                                           | Notable differences between MTM and guidelines                                                    | Again, table captions are not the same as a general caption                          |
+| \_  Media overlays                                                       | Minor difference                                                                                  |                                                                                      |
 #+END:
 
 * Guidelines [15/15]
@@ -41,6 +41,7 @@
 *** DONE Font choice
 :PROPERTIES:
 :COMMENT:  Is no font recommended in the guidelines?
+:RESOLUTION: No, no specific font is recommended
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_font.css :eval no
@@ -81,6 +82,7 @@ body {
 *** DONE Line spacing
 :PROPERTIES:
 :COMMENT:  The guidelines recommend 1.4-1.5 but it doesn't seem to be defined
+:RESOLUTION: Added an issue (#3). MTM will look into it
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_line_spacing.css :eval no
@@ -133,6 +135,7 @@ body {
 *** DONE Paragraph spacing
 :PROPERTIES:
 :COMMENT:  The guidelines recommend adding some spacing between paragraphs but it doesn't seem to be defined
+:RESOLUTION: The browser default is good enough
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_paragraph_spacing.css :eval no
@@ -167,6 +170,7 @@ body {
 *** DONE Page margins
 :PROPERTIES:
 :COMMENT:  The guidelines state that these are defined by the reading system and do not need be defined
+:RESOLUTION: No need to define
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_page_margin.css :eval no
@@ -406,6 +410,7 @@ body {
 ** DONE Blockquotes
 :PROPERTIES:
 :COMMENT:  MTM has italic font
+:RESOLUTION: For backwards compatibility
 :END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_blockquotes.css :eval no
@@ -523,6 +528,7 @@ body {
 *** DONE Definition lists
 :PROPERTIES:
 :COMMENT:  Not defined in guidelines
+:RESOLUTION: Added an example
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_lists_dl.css :eval no
@@ -654,6 +660,7 @@ body {
 *** DONE Poem/verse lines
 :PROPERTIES:
 :COMMENT:  MTM uses Times New Roman as the font. Why?
+:RESOLUTION: For backwards compatibility
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_poem.css :eval no
@@ -758,6 +765,7 @@ body {
 *** DONE Poem inside blockquote
 :PROPERTIES:
 :COMMENT:  The guidelines recommend some CSS which MTM doesn't use
+:RESOLUTION: MTM will add it to their CSS
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_poem_blockquote.css :eval no
@@ -842,6 +850,7 @@ body {
 ** DONE Links
 :PROPERTIES:
 :COMMENT:  Why is the selector '* a' better than 'a'? I believe it is not
+:RESOLUTION: Fixed in CSS
 :END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_links.css :eval no
@@ -892,6 +901,7 @@ body {
 ** DONE Note references
 :PROPERTIES:
 :COMMENT:  role name should probably be quoted
+:RESOLUTION: Fixed in CSS
 :END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_noterefs.css :eval no
@@ -938,6 +948,7 @@ body {
 ** DONE Footnotes
 :PROPERTIES:
 :COMMENT:  MTM defines backlink
+:RESOLUTION: Added an example
 :END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_footnotes.css :eval no
@@ -990,6 +1001,7 @@ body {
 ** DONE Endnotes
 :PROPERTIES:
 :COMMENT:  Not defined in MTM CSS
+:RESOLUTION: MTM doesn't use endnotes
 :END:
 *** SBS
 #+begin_src css :tangle /tmp/sbs_endnotes.css :eval no
@@ -1104,6 +1116,7 @@ body {
 *** DONE Images
 :PROPERTIES:
 :COMMENT:  MTM disables the border
+:RESOLUTION: Minor difference
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_images.css :eval no
@@ -1149,6 +1162,7 @@ body {
 *** DONE Figure captions
 :PROPERTIES:
 :COMMENT:  Guidelines have two examples. One sets the font to italics
+:RESOLUTION: It is fine to have more than one example and to set the font. They are just examples
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_figcaptions.css :eval no
@@ -1279,6 +1293,7 @@ body {
 *** DONE General
 :PROPERTIES:
 :COMMENT:  Guidelines define separate captions and table captions. They do not seem very similar
+:RESOLUTION: Table captions are indeed different than general captions
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_table.css :eval no
@@ -1375,6 +1390,7 @@ body {
 *** DONE Captions
 :PROPERTIES:
 :COMMENT:  Notable differences between MTM and guidelines
+:RESOLUTION: Again, table captions are not the same as a general caption
 :END:
 **** SBS
 #+begin_src css :tangle /tmp/sbs_table_caption.css :eval no
