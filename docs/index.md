@@ -1,4 +1,8 @@
-
+---
+title: Guidelines for accessible CSS
+date: <2024-11-01 Fr>
+author: Oscar Lagerström Carlsson, Christian Egli, Jonas Lillqvist, Linda Lindhé
+---
 
 # Introduction
 
