@@ -1,65 +1,4 @@
 
-# Table of Contents
-
-1.  [Introduction](#org08a4471)
-2.  [Accessible CSS and WCAG](#org1cd2be6)
-    1.  [WCAG criterions relevant to e-book styling](#org4b0c1bd)
-3.  [Who is impacted by e-book styling and layout?](#org4f48adb)
-4.  [E-book readers and CSS](#e-book_readers_ref)
-    1.  [The importance of CSS in accessible e-books](#org4375f7a)
-    2.  [Balancing CSS with user customization](#org4ec868a)
-    3.  [Keep the CSS general](#org865fe72)
-5.  [Body text typography](#org024ea1d)
-6.  [Headings](#org3a9f456)
-7.  [Pagination](#org88dd02b)
-8.  [Blockquotes](#org8b7aa80)
-9.  [Lists](#org228b30f)
-10. [Text boxes](#org2fa398c)
-11. [Poems](#org9673a02)
-    1.  [Poem/verse lines](#orga366901)
-    2.  [Line numbers](#org4271c84)
-12. [Links](#org4f7680c)
-13. [Note references](#orgff55b15)
-14. [Endnotes](#orgba9663d)
-15. [Computer code](#org70a4d76)
-16. [Figures](#org146883a)
-    1.  [Images](#org6c71d8c)
-    2.  [Figure captions](#org527714f)
-    3.  [Figure descriptions and table descriptions (extended descriptions)](#org3495b26)
-17. [Tables](#orgfb1804c)
-18. [Media overlays](#orga760bde)
-19. [Appendix 1: Typeface accessibility](#org51a272f)
-    1.  [Choosing a sans serif typeface](#orged2cd71)
-        1.  [Choosing a serif typeface](#org5d6929f)
-    2.  [Typographic layout and styling](#org827de1d)
-    3.  [Resources](#org744a3d3)
-20. [Appendix 2: CSS examples](#org3e3f962)
-    1.  [CSS example: Pagination](#pagination_ref)
-    2.  [CSS example: Blockquotes](#blockquotes_ref)
-    3.  [CSS example: Blockquote with emphasis](#blockquotes_emph_ref)
-    4.  [CSS example: Lists](#lists_ref)
-    5.  [CSS example: Text-boxes](#text-box_ref)
-    6.  [CSS example: Poems](#poems_ref)
-    7.  [CSS example: Line numbers](#line-number_ref)
-    8.  [CSS example: Links](#link_ref)
-    9.  [CSS example: Note references](#note_ref)
-    10. [CSS example: Footnotes](#footnote_ref)
-    11. [CSS example: Endnotes](#endnote_ref)
-    12. [CSS example: Code](#code_ref)
-    13. [CSS example: Figures](#figure_ref)
-    14. [CSS example: Images](#image_ref)
-    15. [CSS-examples: Figcaption](#fig-caps_ref)
-    16. [CSS example: Figure and table descriptions](#fig-desc_ref)
-    17. [CSS example: Tables](#table_ref)
-    18. [CSS example: Table caption (for table style without borders for table and td cells)](#table-caps_ref)
-    19. [CSS example: Table wrapper](#table-wrapper_ref)
-    20. [CSS example: Math](#math_ref)
-    21. [CSS example: Media overlays - CSS](#media-css_ref)
-    22. [Example: Media overlays - opf-file](#media-opf_ref)
-
-
-
-<a id="org08a4471"></a>
 
 # Introduction
 
@@ -83,8 +22,6 @@ will be adjusted and expanded to reflect ongoing learning and
 collaboration.
 
 
-<a id="org1cd2be6"></a>
-
 # Accessible CSS and WCAG
 
 WCAG and resources such as the Daisy Knowledge Base provide limited
@@ -97,8 +34,6 @@ text blocks, though it only mandates that a mechanism be available to
 achieve the required styling, potentially provided by the reading system
 itself.
 
-
-<a id="org4b0c1bd"></a>
 
 ## WCAG criterions relevant to e-book styling
 
@@ -119,8 +54,6 @@ itself.
 -   [Success Criterion 1.4.12 Text Spacing](https://www.w3.org/TR/WCAG21/#text-spacing) (AA)
     -   See also Daisy KB, [Text Spacing](https://kb.daisy.org/publishing/docs/css/text-spacing.html)
 
-
-<a id="org4f48adb"></a>
 
 # Who is impacted by e-book styling and layout?
 
@@ -172,8 +105,6 @@ guidelines are based on the assumption that the reading apps we offer or
 recommend to our patrons will support the book's CSS.
 
 
-<a id="org4375f7a"></a>
-
 ## The importance of CSS in accessible e-books
 
 Including a CSS stylesheet in the book is important for several reasons.
@@ -207,8 +138,6 @@ Including a CSS stylesheet in the book is important for several reasons.
     regardless of the device or app.
 
 
-<a id="org4ec868a"></a>
-
 ## Balancing CSS with user customization
 
 Including a CSS stylesheet in the book does not generally prevent
@@ -239,8 +168,6 @@ the book's presentation without hindering the reader's ability to
 customize their experience.
 
 
-<a id="org865fe72"></a>
-
 ## Keep the CSS general
 
 Since special libraries often apply the same CSS to a wide range of
@@ -257,8 +184,6 @@ detailed recommendations and examples for styling various elements.
 These guidelines aim to help you create a consistent and accessible
 reading experience across a wide range of books.
 
-
-<a id="org024ea1d"></a>
 
 # Body text typography
 
@@ -281,8 +206,6 @@ reading experience across a wide range of books.
     the reading system, so there is no need to set in your CSS.
 
 
-<a id="org3a9f456"></a>
-
 # Headings
 
 Headings should stand out and be easily distinguishable by level to
@@ -294,8 +217,6 @@ after, and higher-level headings have greater spacing overall. Using a
 different font or generic font family for headings than body text can
 also enhance their visibility.
 
-
-<a id="org88dd02b"></a>
 
 # Pagination
 
@@ -318,8 +239,6 @@ attribute, only if the page break element has no text node.
 [CSS example: Pagination](#pagination_ref)
 
 
-<a id="org8b7aa80"></a>
-
 # Blockquotes
 
 To make blockquotes stand out, indent them on the left, and optionally
@@ -335,8 +254,6 @@ italics through CSS (apply font-style=normal).
 [CSS example: Blockquotes with emphasis](#blockquotes_emph_ref)
 
 
-<a id="org228b30f"></a>
-
 # Lists
 
 Indent lists and make sure that the line spacing is not too big. Ordered
@@ -347,8 +264,6 @@ legible.
 
 [CSS example: Lists](#lists_ref)
 
-
-<a id="org2fa398c"></a>
 
 # Text boxes
 
@@ -361,8 +276,6 @@ sufficient (<http://kb.daisy.org/publishing/docs/css/contrast.html>).
 [CSS example: Text boxes](#text-box_ref)
 
 
-<a id="org9673a02"></a>
-
 # Poems
 
 For poems, use a left indent. Since blockquotes have a left indent as
@@ -374,8 +287,6 @@ If a poem consists of several stanzas, spacing between them needs to be
 taken into consideration.
 
 
-<a id="orga366901"></a>
-
 ## Poem/verse lines
 
 Poems need to be marked up on a line-by-line basis. Use a hanging indent
@@ -383,8 +294,6 @@ for lines that automatically overflow to a new line.
 
 [CSS example: Poems](#poems_ref)
 
-
-<a id="org4271c84"></a>
 
 ## Line numbers
 
@@ -394,8 +303,6 @@ the poem.
 
 [CSS example: Line numbers](#line-number_ref)
 
-
-<a id="org4f7680c"></a>
 
 # Links
 
@@ -407,8 +314,6 @@ activate when a user hovers the mouse over the link.
 [CSS example: Links](#link_ref)
 
 
-<a id="orgff55b15"></a>
-
 # Note references
 
 Note references should be superscripted and styling should be similar to
@@ -418,8 +323,6 @@ suggest the styling is achieved through CSS instead.
 [CSS example: Notes](#note_ref)
 
 
-<a id="orgba9663d"></a>
-
 # Endnotes
 
 Since list markup is used for endnotes, they can partly be handled with
@@ -427,8 +330,6 @@ the CSS rules used for lists.
 
 [CSS example: Endnotes](#endnote_ref)
 
-
-<a id="org70a4d76"></a>
 
 # Computer code
 
@@ -447,8 +348,6 @@ the available space.
 [CSS example: Computer code](#code_ref)
 
 
-<a id="org146883a"></a>
-
 # Figures
 
 The figure element groups images or tables with their captions and
@@ -457,8 +356,6 @@ captions and descriptions on the same page as the image when possible.
 
 [CSS example: Figures](#figure_ref)
 
-
-<a id="org6c71d8c"></a>
 
 ## Images
 
@@ -477,8 +374,6 @@ image size (%, `em`), and to use `max-width` or similar rather than
 [CSS example: Images](#image_ref)
 
 
-<a id="org527714f"></a>
-
 ## Figure captions
 
 Ensure figure captions are distinct from the body text, stay close to
@@ -486,8 +381,6 @@ the image, and have sufficient spacing from surrounding content.
 
 [CSS example: Figure cations](#fig-caps_ref)
 
-
-<a id="org3495b26"></a>
 
 ## Figure descriptions and table descriptions (extended descriptions)
 
@@ -500,8 +393,6 @@ boxes.
 
 [CSS example: Figure descriptions](#fig-desc_ref)
 
-
-<a id="orgfb1804c"></a>
 
 # Tables
 
@@ -526,8 +417,6 @@ the table scrollable.
 [CSS example: Tables wrapper](#table-wrapper_ref)
 
 
-<a id="orga760bde"></a>
-
 # Media overlays
 
 Titles that are produced with media overlays need additional CSS-rules
@@ -545,8 +434,6 @@ Keep color contrasts in mind when choosing text and background colors.
 
 [CSS example: Media overlays - opf-file](#media-opf_ref)
 
-
-<a id="org51a272f"></a>
 
 # Appendix 1: Typeface accessibility
 
@@ -589,8 +476,6 @@ readers.” (Gareth Ford Williams, [A Guide to Understanding What Makes a
 Typeface Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0))
 
 
-<a id="orged2cd71"></a>
-
 ## Choosing a sans serif typeface
 
 Humanist sans serifs have the most accessible characteristics.
@@ -600,14 +485,10 @@ Examples: Calibri, Verdana, Tahoma; new Microsoft fonts: Seaford, Skeena
 Note: Not a recommendation to use these specifically
 
 
-<a id="org5d6929f"></a>
-
 ### Choosing a serif typeface
 
 Examples with more accessible characteristics: Georgia, Sabon
 
-
-<a id="org827de1d"></a>
 
 ## Typographic layout and styling
 
@@ -619,8 +500,6 @@ Examples with more accessible characteristics: Georgia, Sabon
 -   Left align paragraphs
 
 
-<a id="org744a3d3"></a>
-
 ## Resources
 
 Daisy Accessible Publishing Knowledge Base, [CSS](https://kb.daisy.org/publishing/docs/css/)
@@ -631,8 +510,6 @@ Design, <https://youtu.be/ha768Ih6J8M?si=zfIc5ZL78okwUiMS>
 Gareth Ford Williams, [A Guide to Understanding What Makes a Typeface
 Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0)
 
-
-<a id="org3e3f962"></a>
 
 # Appendix 2: CSS examples
 
@@ -983,8 +860,6 @@ Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-wh
         max-height: 100%; /* for Calibre */
     }
 
-
-<a id="math_ref"></a>
 
 ## CSS example: Math
 

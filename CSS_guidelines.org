@@ -1,6 +1,8 @@
+#+options: toc:nil
 #+title: Guidelines for accessible CSS
 #+date: <2024-11-01 Fr>
 #+author: Oscar Lagerström Carlsson, Christian Egli, Jonas Lillqvist, Linda Lindhé
+#+language: en
 
 * Introduction
 This document provides general guidelines for creating a common,
