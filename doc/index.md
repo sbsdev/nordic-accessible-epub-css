@@ -1,24 +1,89 @@
+
+# Table of Contents
+
+1.  [Introduction](#org08a4471)
+2.  [Accessible CSS and WCAG](#org1cd2be6)
+    1.  [WCAG criterions relevant to e-book styling](#org4b0c1bd)
+3.  [Who is impacted by e-book styling and layout?](#org4f48adb)
+4.  [E-book readers and CSS](#e-book_readers_ref)
+    1.  [The importance of CSS in accessible e-books](#org4375f7a)
+    2.  [Balancing CSS with user customization](#org4ec868a)
+    3.  [Keep the CSS general](#org865fe72)
+5.  [Body text typography](#org024ea1d)
+6.  [Headings](#org3a9f456)
+7.  [Pagination](#org88dd02b)
+8.  [Blockquotes](#org8b7aa80)
+9.  [Lists](#org228b30f)
+10. [Text boxes](#org2fa398c)
+11. [Poems](#org9673a02)
+    1.  [Poem/verse lines](#orga366901)
+    2.  [Line numbers](#org4271c84)
+12. [Links](#org4f7680c)
+13. [Note references](#orgff55b15)
+14. [Endnotes](#orgba9663d)
+15. [Computer code](#org70a4d76)
+16. [Figures](#org146883a)
+    1.  [Images](#org6c71d8c)
+    2.  [Figure captions](#org527714f)
+    3.  [Figure descriptions and table descriptions (extended descriptions)](#org3495b26)
+17. [Tables](#orgfb1804c)
+18. [Media overlays](#orga760bde)
+19. [Appendix 1: Typeface accessibility](#org51a272f)
+    1.  [Choosing a sans serif typeface](#orged2cd71)
+        1.  [Choosing a serif typeface](#org5d6929f)
+    2.  [Typographic layout and styling](#org827de1d)
+    3.  [Resources](#org744a3d3)
+20. [Appendix 2: CSS examples](#org3e3f962)
+    1.  [CSS example: Pagination](#pagination_ref)
+    2.  [CSS example: Blockquotes](#blockquotes_ref)
+    3.  [CSS example: Blockquote with emphasis](#blockquotes_emph_ref)
+    4.  [CSS example: Lists](#lists_ref)
+    5.  [CSS example: Text-boxes](#text-box_ref)
+    6.  [CSS example: Poems](#poems_ref)
+    7.  [CSS example: Line numbers](#line-number_ref)
+    8.  [CSS example: Links](#link_ref)
+    9.  [CSS example: Note references](#note_ref)
+    10. [CSS example: Footnotes](#footnote_ref)
+    11. [CSS example: Endnotes](#endnote_ref)
+    12. [CSS example: Code](#code_ref)
+    13. [CSS example: Figures](#figure_ref)
+    14. [CSS example: Images](#image_ref)
+    15. [CSS-examples: Figcaption](#fig-caps_ref)
+    16. [CSS example: Figure and table descriptions](#fig-desc_ref)
+    17. [CSS example: Tables](#table_ref)
+    18. [CSS example: Table caption (for table style without borders for table and td cells)](#table-caps_ref)
+    19. [CSS example: Table wrapper](#table-wrapper_ref)
+    20. [CSS example: Math](#math_ref)
+    21. [CSS example: Media overlays - CSS](#media-css_ref)
+    22. [Example: Media overlays - opf-file](#media-opf_ref)
+
+
+
+<a id="org08a4471"></a>
+
 # Introduction
 
 This document provides general guidelines for creating a common,
 accessible CSS stylesheet for EPUB publications produced by Nordic
 special libraries serving print-disabled readers. The aim is to ensure
-that EPUB content is inclusive and adaptable, meeting the diverse needs
-of library patrons. While these guidelines draw on the [Web Content
-Accessibility
-Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG)
-and resources such as the [DAISY Knowledge
-Base](https://kb.daisy.org/publishing/docs/), they extend beyond the
-basic criteria offered by these sources to address broader aspects of
-readability, text formatting, and layout.
+that EPUB content is inclusive and adaptable, meeting the diverse
+needs of library patrons. While these guidelines draw on the [Web
+Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) and resources such as the
+[DAISY Knowledge Base](https://kb.daisy.org/publishing/docs/), they extend beyond the basic criteria offered by
+these sources to address broader aspects of readability, text
+formatting, and layout.
 
 The CSS rules outlined here are intended to align with EPUBs created
-according to the Nordic Guidelines for the Production of Accessible EPUB
-3. This document does not, however, cover every element and attribute
-that may be used in books produced according to the Nordic Guidelines,
-as it operates on a more general level than the CSS stylesheet itself.
-As we continue to refine our approach, this document will be adjusted
-and expanded to reflect ongoing learning and collaboration.
+according to the Nordic Guidelines for the Production of Accessible
+EPUB 3. This document does not, however, cover every element and
+attribute that may be used in books produced according to the Nordic
+Guidelines, as it operates on a more general level than the CSS
+stylesheet itself. As we continue to refine our approach, this document
+will be adjusted and expanded to reflect ongoing learning and
+collaboration.
+
+
+<a id="org1cd2be6"></a>
 
 # Accessible CSS and WCAG
 
@@ -32,58 +97,52 @@ text blocks, though it only mandates that a mechanism be available to
 achieve the required styling, potentially provided by the reading system
 itself.
 
+
+<a id="org4b0c1bd"></a>
+
 ## WCAG criterions relevant to e-book styling
 
-- [Success Criterion 1.4.1 Use of
-  Color](https://www.w3.org/TR/WCAG21/#use-of-color) (A)
-- [Technique
-  G182](https://www.w3.org/WAI/WCAG21/Techniques/general/G182): Ensuring
-  that additional visual cues are available when text color differences
-  are used to convey information
-- [Technique
-  G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183): Using a
-  contrast ratio of 3:1 with surrounding text and providing additional
-  visual cues on hover for links or controls where color alone is used
-  to identify them
-  - See also Daisy KB,
-    [Color](https://kb.daisy.org/publishing/docs/css/color.html)
-- [Success Criterion 1.4.3 Contrast
-  (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) (AA)
-  - See also Daisy KB,
-    [Contrast](https://kb.daisy.org/publishing/docs/css/contrast.html)
-- [Success Criterion 1.4.4 Resize
-  Text](https://www.w3.org/TR/WCAG21/#resize-text) (AA)
-  - See also Daisy KB, [Text
-    Resizing](https://kb.daisy.org/publishing/docs/css/text-resize.html)
-- [Success Criterion 1.4.8 Visual
-  Presentation](https://www.w3.org/TR/WCAG21/#visual-presentation) (AAA)
-- [Success Criterion 1.4.10
-  Reflow](https://www.w3.org/TR/WCAG21/#reflow) (AA)
-  - See also Daisy KB,
-    [Reflow](https://kb.daisy.org/publishing/docs/css/reflow.html)
-- [Success Criterion 1.4.12 Text
-  Spacing](https://www.w3.org/TR/WCAG21/#text-spacing) (AA)
-  - See also Daisy KB, [Text
-    Spacing](https://kb.daisy.org/publishing/docs/css/text-spacing.html)
+-   [Success Criterion 1.4.1 Use of Color](https://www.w3.org/TR/WCAG21/#use-of-color) (A)
+-   [Technique G182](https://www.w3.org/WAI/WCAG21/Techniques/general/G182): Ensuring that additional visual cues are available
+    when text color differences are used to convey information
+-   [Technique G183](https://www.w3.org/WAI/WCAG21/Techniques/general/G183): Using a contrast ratio of 3:1 with surrounding text
+    and providing additional visual cues on hover for links or controls
+    where color alone is used to identify them
+    -   See also Daisy KB, [Color](https://kb.daisy.org/publishing/docs/css/color.html)
+-   [Success Criterion 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) (AA)
+    -   See also Daisy KB, [Contrast](https://kb.daisy.org/publishing/docs/css/contrast.html)
+-   [Success Criterion 1.4.4 Resize Text](https://www.w3.org/TR/WCAG21/#resize-text) (AA)
+    -   See also Daisy KB, [Text Resizing](https://kb.daisy.org/publishing/docs/css/text-resize.html)
+-   [Success Criterion 1.4.8 Visual Presentation](https://www.w3.org/TR/WCAG21/#visual-presentation) (AAA)
+-   [Success Criterion 1.4.10 Reflow](https://www.w3.org/TR/WCAG21/#reflow) (AA)
+    -   See also Daisy KB, [Reflow](https://kb.daisy.org/publishing/docs/css/reflow.html)
+-   [Success Criterion 1.4.12 Text Spacing](https://www.w3.org/TR/WCAG21/#text-spacing) (AA)
+    -   See also Daisy KB, [Text Spacing](https://kb.daisy.org/publishing/docs/css/text-spacing.html)
+
+
+<a id="org4f48adb"></a>
 
 # Who is impacted by e-book styling and layout?
 
-- People with vision disabilities
-  - Low vision
-    - WCAG Resize text
-    - WCAG Reflow
-    - WCAG Contrast
-  - Colour blindness
-    - WCAG Use of colour
-    - WCAG Contrast
-  - Blindness
-    - Styling not an issue in general
-    - All caps can be a problem
-- People with dyslexia, cognitive or learning disabilities
-  - WCAG Text spacing
-  - WCAG Visual presentation
-  - Legible and readable text
-  - Simple, clear layout
+-   People with vision disabilities
+    -   Low vision
+        -   WCAG Resize text
+        -   WCAG Reflow
+        -   WCAG Contrast
+    -   Colour blindness
+        -   WCAG Use of colour
+        -   WCAG Contrast
+    -   Blindness
+        -   Styling not an issue in general
+        -   All caps can be a problem
+-   People with dyslexia, cognitive or learning disabilities
+    -   WCAG Text spacing
+    -   WCAG Visual presentation
+    -   Legible and readable text
+    -   Simple, clear layout
+
+
+<a id="e-book_readers_ref"></a>
 
 # E-book readers and CSS
 
@@ -92,18 +151,14 @@ styling is handled through CSS. This allows for flexibility in layout,
 fonts, colors, and other visual aspects. In e-book readers, there are
 three layers of styling:
 
-Default styles of the app  
-These provide a fallback when no specific styling is defined in the
-book's CSS.
+-   **Default styles of the app:** These provide a fallback when no
+    specific styling is defined in the book's CSS.
 
-The stylesheet included in the book  
-This is the CSS authored by the e-book creator, which defines the
-intended look and feel.
-
-User settings  
-These take precedence over both the default styles and the book's CSS,
-allowing readers to customize the reading experience according to their
-preferences.
+-   **The stylesheet included in the book:** This is the CSS authored by
+    the e-book creator, which defines the intended look and feel.
+-   **User settings:** These take precedence over both the default styles
+    and the book's CSS, allowing readers to customize the reading
+    experience according to their preferences.
 
 The reading app typically applies these layers in a cascading manner,
 with user settings having the highest priority. In some cases, however,
@@ -116,65 +171,75 @@ e-book, as the development of reading apps is beyond its scope. These
 guidelines are based on the assumption that the reading apps we offer or
 recommend to our patrons will support the book's CSS.
 
+
+<a id="org4375f7a"></a>
+
 ## The importance of CSS in accessible e-books
 
 Including a CSS stylesheet in the book is important for several reasons.
 
-Enhancing accessibility for visual reading  
-Thoughtfully crafted CSS can benefit readers with dyslexia or those who
-are visually impaired but are able to read visually. It allows for clear
-headings, proper contrast, customized line spacing, and font choices
-that improve readability, making the content more accessible and easier
-to process.
+-   **Enhancing accessibility for visual reading:** Thoughtfully crafted
+    CSS can benefit readers with dyslexia or those who are visually
+    impaired but are able to read visually. It allows for clear
+    headings, proper contrast, customized line spacing, and font choices
+    that improve readability, making the content more accessible and
+    easier to process.
 
-Supporting complex layouts and structure  
-Books with tables, footnotes, or multi-level headings often require
-precise styling to remain clear and accessible. CSS helps maintain this
-structure, ensuring that even complex content is navigable and
-understandable for all readers.
+-   **Supporting complex layouts and structure:** Books with tables,
+    footnotes, or multi-level headings often require precise styling to
+    remain clear and accessible. CSS helps maintain this structure,
+    ensuring that even complex content is navigable and understandable
+    for all readers.
+    
+    Some elements found in more complex books, such as image
+    descriptions or text boxes, will not be distinguishable from
+    ordinary body text when relying solely on the app's default
+    stylesheet. Additionally, some elements will be distinguishable but
+    easily confused with another. For example, the default styling of
+    headings at different levels may not allow the reader to
+    differentiate them visually. Similarly, image captions and
+    blockquotes can appear identical in some reading apps.
 
-Some elements found in more complex books, such as image descriptions or
-text boxes, will not be distinguishable from ordinary body text when
-relying solely on the app's default stylesheet. Additionally, some
-elements will be distinguishable but easily confused with another. For
-example, the default styling of headings at different levels may not
-allow the reader to differentiate them visually. Similarly, image
-captions and blockquotes can appear identical in some reading apps.
+-   **Maintaining consistency across reading apps:** E-book reading apps
+    can differ significantly in how they handle default styles. By
+    including a CSS stylesheet, you provide a consistent baseline,
+    ensuring that the book is presented in a reader-friendly way,
+    regardless of the device or app.
 
-Maintaining consistency across reading apps  
-E-book reading apps can differ significantly in how they handle default
-styles. By including a CSS stylesheet, you provide a consistent
-baseline, ensuring that the book is presented in a reader-friendly way,
-regardless of the device or app.
+
+<a id="org4ec868a"></a>
 
 ## Balancing CSS with user customization
 
-Including a CSS stylesheet in the book does not generally prevent users
-from applying their own settings to fit their needs. As outlined in
-[E-book readers and CSS](#e-book_readers_ref), user settings typically
-have the highest priority and will override the book's CSS. This ensures
-that readers can adjust aspects such as font size, line spacing, and
-background color according to their preferences.
+Including a CSS stylesheet in the book does not generally prevent
+users from applying their own settings to fit their needs. As outlined
+in [E-book readers and CSS](#e-book_readers_ref), user settings typically have the highest
+priority and will override the book's CSS. This ensures that readers
+can adjust aspects such as font size, line spacing, and background
+color according to their preferences.
 
 However, certain CSS practices can inadvertently restrict user
-customization, so it's important to write the CSS thoughtfully. Here are
-a few key considerations:
+customization, so it's important to write the CSS thoughtfully. Here
+are a few key considerations:
 
-Avoid absolute units  
-Using absolute units like pixels (`px`) can prevent text from resizing
-correctly, limiting the reader's ability to adjust font sizes. Instead,
-use relative units like `em` or `rem`, which adapt more flexibly to
-different user settings and screen sizes.
+-   **Avoid absolute units:** Using absolute units like pixels (`px`) can
+    prevent text from resizing correctly, limiting the reader's ability
+    to adjust font sizes. Instead, use relative units like `em` or `rem`,
+    which adapt more flexibly to different user settings and screen
+    sizes.
 
-Be cautious with text colors  
-Defining text or background colors should be avoided unless there's a
-specific need. If the text color is set without considering background
-contrast, it might conflict with a user's chosen background color
-scheme, potentially making the text difficult to read.
+-   **Be cautious with text colors:** Defining text or background colors
+    should be avoided unless there's a specific need. If the text color
+    is set without considering background contrast, it might conflict
+    with a user's chosen background color scheme, potentially making the
+    text difficult to read.
 
-By following these guidelines, you can ensure that your CSS enhances the
-book's presentation without hindering the reader's ability to customize
-their experience.
+By following these guidelines, you can ensure that your CSS enhances
+the book's presentation without hindering the reader's ability to
+customize their experience.
+
+
+<a id="org865fe72"></a>
 
 ## Keep the CSS general
 
@@ -192,28 +257,31 @@ detailed recommendations and examples for styling various elements.
 These guidelines aim to help you create a consistent and accessible
 reading experience across a wide range of books.
 
+
+<a id="org024ea1d"></a>
+
 # Body text typography
 
-Font choice  
-Generally, it only makes sense to specify a specific font in the CSS if
-the font is embedded in the publication or is a widely used system font.
-Alternatively, you can specify a generic font family (e.g. sans-serif,
-serif). It is always a good idea to specify a generic font family as a
-fallback when you specify a font.
+-   **Font choice:** Generally, it only makes sense to specify a specific
+    font in the CSS if the font is embedded in the publication or is a
+    widely used system font. Alternatively, you can specify a generic
+    font family (e.g. sans-serif, serif). It is always a good idea to
+    specify a generic font family as a fallback when you specify a font.
 
-Line spacing  
-The default line spacing in reading apps is often too tight. For a
-better reading experience, we recommend setting the line spacing for
-body text to roughly 1.4-1.5.
+-   **Line spacing:** The default line spacing in reading apps is often
+    too tight. For a better reading experience, we recommend setting the
+    line spacing for body text to roughly 1.4-1.5.
 
-Paragraph spacing  
-As a default, reading systems generally add spacing between paragraphs.
-This may be good enough, or you might want to add rules specifying a
-certain spacing between paragraphs (for example using `margin-top`).
+-   **Paragraph spacing:** As a default, reading systems generally add
+    spacing between paragraphs. This may be good enough, or you might
+    want to add rules specifying a certain spacing between paragraphs
+    (for example using `margin-top`).
 
-Page margins  
-The body text or page margin is usually handled by the reading system,
-so there is no need to set in your CSS.
+-   **Page margins:** The body text or page margin is usually handled by
+    the reading system, so there is no need to set in your CSS.
+
+
+<a id="org3a9f456"></a>
 
 # Headings
 
@@ -225,6 +293,9 @@ for long headings. Typically, spacing before a heading is larger than
 after, and higher-level headings have greater spacing overall. Using a
 different font or generic font family for headings than body text can
 also enhance their visibility.
+
+
+<a id="org88dd02b"></a>
 
 # Pagination
 
@@ -246,6 +317,9 @@ attribute, only if the page break element has no text node.
 
 [CSS example: Pagination](#pagination_ref)
 
+
+<a id="org8b7aa80"></a>
+
 # Blockquotes
 
 To make blockquotes stand out, indent them on the left, and optionally
@@ -260,6 +334,9 @@ italics through CSS (apply font-style=normal).
 
 [CSS example: Blockquotes with emphasis](#blockquotes_emph_ref)
 
+
+<a id="org228b30f"></a>
+
 # Lists
 
 Indent lists and make sure that the line spacing is not too big. Ordered
@@ -269,6 +346,9 @@ This can be used for different levels in nested lists to make them more
 legible.
 
 [CSS example: Lists](#lists_ref)
+
+
+<a id="org2fa398c"></a>
 
 # Text boxes
 
@@ -280,15 +360,21 @@ sufficient (<http://kb.daisy.org/publishing/docs/css/contrast.html>).
 
 [CSS example: Text boxes](#text-box_ref)
 
+
+<a id="org9673a02"></a>
+
 # Poems
 
 For poems, use a left indent. Since blockquotes have a left indent as
 well, consider using a larger left indent for poems than for
-blockquotes. The CSS must also work for cases where the poem is part of
-a blockquote.
+blockquotes. The CSS must also work for cases where the poem is part
+of a blockquote.
 
 If a poem consists of several stanzas, spacing between them needs to be
 taken into consideration.
+
+
+<a id="orga366901"></a>
 
 ## Poem/verse lines
 
@@ -297,6 +383,9 @@ for lines that automatically overflow to a new line.
 
 [CSS example: Poems](#poems_ref)
 
+
+<a id="org4271c84"></a>
+
 ## Line numbers
 
 For poems containing line-numbers, offset the line number to the left
@@ -304,6 +393,9 @@ using a negative left indent so that it does not disturb the layout of
 the poem.
 
 [CSS example: Line numbers](#line-number_ref)
+
+
+<a id="org4f7680c"></a>
 
 # Links
 
@@ -314,6 +406,9 @@ activate when a user hovers the mouse over the link.
 
 [CSS example: Links](#link_ref)
 
+
+<a id="orgff55b15"></a>
+
 # Note references
 
 Note references should be superscripted and styling should be similar to
@@ -322,13 +417,8 @@ suggest the styling is achieved through CSS instead.
 
 [CSS example: Notes](#note_ref)
 
-# Footnotes
 
-Footnote text should use a smaller font size than body text.
-Additionally, smaller line spacing can be used. Ensure there is enough
-spacing or a border between footnotes to clearly differentiate them.
-
-[CSS example: Footnotes](#footnote_ref)
+<a id="orgba9663d"></a>
 
 # Endnotes
 
@@ -336,6 +426,9 @@ Since list markup is used for endnotes, they can partly be handled with
 the CSS rules used for lists.
 
 [CSS example: Endnotes](#endnote_ref)
+
+
+<a id="org70a4d76"></a>
 
 # Computer code
 
@@ -353,6 +446,9 @@ the available space.
 
 [CSS example: Computer code](#code_ref)
 
+
+<a id="org146883a"></a>
+
 # Figures
 
 The figure element groups images or tables with their captions and
@@ -360,6 +456,9 @@ descriptions. Use CSS to adjust its margins, padding, and to keep
 captions and descriptions on the same page as the image when possible.
 
 [CSS example: Figures](#figure_ref)
+
+
+<a id="org6c71d8c"></a>
 
 ## Images
 
@@ -377,12 +476,18 @@ image size (%, `em`), and to use `max-width` or similar rather than
 
 [CSS example: Images](#image_ref)
 
+
+<a id="org527714f"></a>
+
 ## Figure captions
 
 Ensure figure captions are distinct from the body text, stay close to
 the image, and have sufficient spacing from surrounding content.
 
 [CSS example: Figure cations](#fig-caps_ref)
+
+
+<a id="org3495b26"></a>
 
 ## Figure descriptions and table descriptions (extended descriptions)
 
@@ -394,6 +499,9 @@ Use a different color for image descriptions from what is used for text
 boxes.
 
 [CSS example: Figure descriptions](#fig-desc_ref)
+
+
+<a id="orgfb1804c"></a>
 
 # Tables
 
@@ -417,6 +525,9 @@ the table scrollable.
 
 [CSS example: Tables wrapper](#table-wrapper_ref)
 
+
+<a id="orga760bde"></a>
+
 # Media overlays
 
 Titles that are produced with media overlays need additional CSS-rules
@@ -434,45 +545,51 @@ Keep color contrasts in mind when choosing text and background colors.
 
 [CSS example: Media overlays - opf-file](#media-opf_ref)
 
+
+<a id="org51a272f"></a>
+
 # Appendix 1: Typeface accessibility
 
 An accessible typeface should be:
 
-- Legible (how effectively a person can distinguish individual letters)
-- Readable (how effectively a person can understand sentences, read
-  comfortably for a period of time)
+-   Legible (how effectively a person can distinguish individual
+    letters)
+-   Readable (how effectively a person can understand sentences, read
+    comfortably for a period of time)
 
 Accessible typeface tips:
 
-- Choose a taller x-height
-- Choose more open typefaces (larger apertures)
-- Choose larger white spaces within letters
-- Avoid ligatures (joined letters)
-- Choose typefaces with recognizable letters
-  - avoid letters that are easily mistaken for one another
-  - avoid letters that are mirror images of one another
-- Look at spacing between letters - not too tight, not too large
-- Limit using all caps text
-- Avoid images of text
+-   Choose a taller x-height
+-   Choose more open typefaces (larger apertures)
+-   Choose larger white spaces within letters
+-   Avoid ligatures (joined letters)
+-   Choose typefaces with recognizable letters
+    -   avoid letters that are easily mistaken for one another
+    -   avoid letters that are mirror images of one another
+-   Look at spacing between letters - not too tight, not too large
+-   Limit using all caps text
+-   Avoid images of text
 
 Consider the context:
 
-- What tone do you want to convey?
-- Who is your audience?
-- What type of text content is it? (Body text, headings …)
-- Where/on what platforms will the text be read? Type of screen?
+-   What tone do you want to convey?
+-   Who is your audience?
+-   What type of text content is it? (Body text, headings &#x2026;)
+-   Where/on what platforms will the text be read? Type of screen?
 
 Key typeface families:
 
-- Sans serif – generally a good choice for digital use
-- Serif – can be an accessible choice for digital use
-  - not the best for: small text, lower resolution screens
+-   Sans serif &#x2013; generally a good choice for digital use
+-   Serif &#x2013; can be an accessible choice for digital use
+    -   not the best for: small text, lower resolution screens
 
 “Serifs form word shapes to enable more fluid readability however sans
 serif can aid individual character recognition for less advanced
 readers.” (Gareth Ford Williams, [A Guide to Understanding What Makes a
-Typeface
-Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0))
+Typeface Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0))
+
+
+<a id="orged2cd71"></a>
 
 ## Choosing a sans serif typeface
 
@@ -482,400 +599,432 @@ Examples: Calibri, Verdana, Tahoma; new Microsoft fonts: Seaford, Skeena
 
 Note: Not a recommendation to use these specifically
 
+
+<a id="org5d6929f"></a>
+
 ### Choosing a serif typeface
 
 Examples with more accessible characteristics: Georgia, Sabon
 
+
+<a id="org827de1d"></a>
+
 ## Typographic layout and styling
 
-- Create visual hierarchy with variations in font weight and size
-- Avoid italics
-- Headings should be sized relative to body text
-- Use suitable line spacing
-- Avoid more than 80 characters paragraph width
-- Left align paragraphs
+-   Create visual hierarchy with variations in font weight and size
+-   Avoid italics
+-   Headings should be sized relative to body text
+-   Use suitable line spacing
+-   Avoid more than 80 characters paragraph width
+-   Left align paragraphs
+
+
+<a id="org744a3d3"></a>
 
 ## Resources
 
-Daisy Accessible Publishing Knowledge Base,
-[CSS](https://kb.daisy.org/publishing/docs/css/)
+Daisy Accessible Publishing Knowledge Base, [CSS](https://kb.daisy.org/publishing/docs/css/)
 
-Vision Australia Digital Access webinar: Typography in Inclusive Design,
-<https://youtu.be/ha768Ih6J8M?si=zfIc5ZL78okwUiMS>
+Vision Australia Digital Access webinar: Typography in Inclusive
+Design, <https://youtu.be/ha768Ih6J8M?si=zfIc5ZL78okwUiMS>
 
 Gareth Ford Williams, [A Guide to Understanding What Makes a Typeface
 Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0)
 
+
+<a id="org3e3f962"></a>
+
 # Appendix 2: CSS examples
+
+
+<a id="pagination_ref"></a>
 
 ## CSS example: Pagination
 
-``` css
-[epub|type='pagebreak'] {
-    font-family: arial, sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    display: block;
-    text-align: right;
-    margin-right: 2em;
-    border-top: solid 1px #E5E5E5;
-    padding-top: 2em;
-    margin-top: 3em;
-}
+    [epub|type='pagebreak'] {
+        font-family: arial, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        display: block;
+        text-align: right;
+        margin-right: 2em;
+        border-top: solid 1px #E5E5E5;
+        padding-top: 2em;
+        margin-top: 3em;
+    }
+    
+    [epub|type='pagebreak']:empty:before {
+        content: attr(aria-label);
+    }
 
-[epub|type='pagebreak']:empty:before {
-    content: attr(aria-label);
-}
-```
+
+<a id="blockquotes_ref"></a>
 
 ## CSS example: Blockquotes
 
-``` css
-blockquote {
-margin-top: 1.5em;
-margin-bottom: 1.5em;
-margin-left: 2em;
-font-size: 90%;
-}
-```
-
-## CSS example: Blockquote with emphasis
-
-``` css
-blockquote {
+    blockquote {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     margin-left: 2em;
     font-size: 90%;
-    font-style: italic;
-}
+    }
 
-blockquote em {
-    font-style: normal;
-}
-```
+
+<a id="blockquotes_emph_ref"></a>
+
+## CSS example: Blockquote with emphasis
+
+    blockquote {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        margin-left: 2em;
+        font-size: 90%;
+        font-style: italic;
+    }
+    
+    blockquote em {
+        font-style: normal;
+    }
+
+
+<a id="lists_ref"></a>
 
 ## CSS example: Lists
 
-``` css
-ol, ul {
-    margin-left: 0.5em;
-}
+    ol, ul {
+        margin-left: 0.5em;
+    }
+    
+    ul.plain, ol.plain {
+        list-style-type: none;
+    }
+    
+    ul li, ol li {
+        margin-top: 1em;
+    }
 
-ul.plain, ol.plain {
-    list-style-type: none;
-}
+    dl {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    dt {
+        margin-top: 1em;
+        font-weight: bold;
+    }
+    
+    dl + dl {
+        margin-top: 1.5em;
+        padding-top: 1em;
+    }
 
-ul li, ol li {
-    margin-top: 1em;
-}
-```
 
-``` css
-dl {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-dt {
-    margin-top: 1em;
-    font-weight: bold;
-}
-
-dl + dl {
-    margin-top: 1.5em;
-    padding-top: 1em;
-}
-```
+<a id="text-box_ref"></a>
 
 ## CSS example: Text-boxes
 
-``` css
-.text-box {
-    border: 1px solid gray;
-    background-color: #E8FBFF;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-}
+    .text-box {
+        border: 1px solid gray;
+        background-color: #E8FBFF;
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+    
+    aside.text-box {
+        background-color: #F3F2F1;
+    }
 
-aside.text-box {
-    background-color: #F3F2F1;
-}
-```
+
+<a id="poems_ref"></a>
 
 ## CSS example: Poems
 
-``` css
-div.verse {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    margin-left: 2em;
-}
+    div.verse {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        margin-left: 2em;
+    }
+    
+    /* for cases where the poem is in a blockquote, assuming margin-left
+       of blockquote is 1.5em: */
+    
+    blockquote div.verse {
+        margin-top: 0;
+        margin-left: 0.5em;
+        margin-bottom: 0;
+    }
+    
+    blockquote div.verse + blockquote div.verse {
+        margin-top: 1.5em;
+    }
+    
+    p.linegroup + p.linegroup {
+        margin-top: 1em;
+    }
+    
+    span.line {
+        display: inline-block;
+        margin-left: 1.2em;
+        text-indent: -1.2em;
+    }
 
-/* for cases where the poem is in a blockquote, assuming margin-left
-   of blockquote is 1.5em: */
 
-blockquote div.verse {
-    margin-top: 0;
-    margin-left: 0.5em;
-    margin-bottom: 0;
-}
-
-blockquote div.verse + blockquote div.verse {
-    margin-top: 1.5em;
-}
-
-p.linegroup + p.linegroup {
-    margin-top: 1em;
-}
-
-span.line {
-    display: inline-block;
-    margin-left: 1.2em;
-    text-indent: -1.2em;
-}
-```
+<a id="line-number_ref"></a>
 
 ## CSS example: Line numbers
 
-``` css
-span.linenum{
-    position: absolute;
-    margin-left: -1.5em;
-    font-weight: normal;
-}
-```
+    span.linenum{
+        position: absolute;
+        margin-left: -1.5em;
+        font-weight: normal;
+    }
+
+
+<a id="link_ref"></a>
 
 ## CSS example: Links
 
-``` css
-a {
-    text-decoration: underline;
-}
+    a {
+        text-decoration: underline;
+    }
+    
+    a:hover, a:active, a:focus {
+        text-decoration: none;
+        color: #CC3333;
+        background-color: #FFFFCC;
+    }
 
-a:hover, a:active, a:focus {
-    text-decoration: none;
-    color: #CC3333;
-    background-color: #FFFFCC;
-}
-```
+
+<a id="note_ref"></a>
 
 ## CSS example: Note references
 
-``` css
-a[role="doc-noteref"] {
-    font-family: arial, helvetica, verdana, sans-serif;
-    vertical-align: super;
-    line-height: normal;
-    font-size: 75%;
-    border: 1px solid #FF0000;
-}
+    a[role="doc-noteref"] {
+        font-family: arial, helvetica, verdana, sans-serif;
+        vertical-align: super;
+        line-height: normal;
+        font-size: 75%;
+        border: 1px solid #FF0000;
+    }
+    
+    /* some books rely on reading systems' default styling for links
+       (usually blue, underline); it would be a good idea to define link
+       styling elsewhere in the stylesheet */
+    
+    a[role="doc-noteref"] {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+        font-size: 0.85em;
+        font-style: normal;
+    }
 
-/* some books rely on reading systems' default styling for links
-   (usually blue, underline); it would be a good idea to define link
-   styling elsewhere in the stylesheet */
 
-a[role="doc-noteref"] {
-    vertical-align: baseline;
-    position: relative;
-    top: -0.4em;
-    font-size: 0.85em;
-    font-style: normal;
-}
-```
+<a id="footnote_ref"></a>
 
 ## CSS example: Footnotes
 
-``` css
-a[role="doc-backlink"] {
-    font-size: 85%;
-    text-decoration: none;
-    border: 1px solid #FF0000;
-}
+    a[role="doc-backlink"] {
+        font-size: 85%;
+        text-decoration: none;
+        border: 1px solid #FF0000;
+    }
+    
+    aside[role="doc-footnote"] {
+        border: thin #FF0000 solid;
+        padding: 1em;
+        margin: 1em;
+    }
 
-aside[role="doc-footnote"] {
-    border: thin #FF0000 solid;
-    padding: 1em;
-    margin: 1em;
-}
-```
+
+<a id="endnote_ref"></a>
 
 ## CSS example: Endnotes
 
-``` css
-section[role="doc-endnotes"] ol {
-    padding-left: 1.2em;
-    font-size: 0.85em;
-}
-```
+    section[role="doc-endnotes"] ol {
+        padding-left: 1.2em;
+        font-size: 0.85em;
+    }
+
+
+<a id="code_ref"></a>
 
 ## CSS example: Code
 
-``` css
-code {
-    font-family: courier, monospace;
-}
+    code {
+        font-family: courier, monospace;
+    }
+    
+    pre {
+        overflow-x: auto;
+        whitespace: pre;
+    }
 
-pre {
-    overflow-x: auto;
-    whitespace: pre;
-}
-```
+
+<a id="figure_ref"></a>
 
 ## CSS example: Figures
 
-``` css
-figure {
-    margin: 1.5em 0 1.5em 0em;
-    padding: 0;
-    page-break-inside: avoid;
-}
-```
+    figure {
+        margin: 1.5em 0 1.5em 0em;
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+
+<a id="image_ref"></a>
 
 ## CSS example: Images
 
-``` css
-img {
-    max-width: 100%;
-    max-height: 80vh; /* to leave room for the caption */
-}
-```
+    img {
+        max-width: 100%;
+        max-height: 80vh; /* to leave room for the caption */
+    }
+
+
+<a id="fig-caps_ref"></a>
 
 ## CSS-examples: Figcaption
 
-``` css
-figcaption {
-    font-style: italic;
-    margin-bottom: 2em;
-}
+    figcaption {
+        font-style: italic;
+        margin-bottom: 2em;
+    }
+    
+    figcaption {
+        font-size: 0.85rem;
+        text-indent: 0;
+        margin-top: 0.5em;
+        line-height: 1.3;
+        font-family: "Source Sans", sans-serif;
+    }
 
-figcaption {
-    font-size: 0.85rem;
-    text-indent: 0;
-    margin-top: 0.5em;
-    line-height: 1.3;
-    font-family: "Source Sans", sans-serif;
-}
-```
+
+<a id="fig-desc_ref"></a>
 
 ## CSS example: Figure and table descriptions
 
-``` css
-aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
-    border: 1px solid #A7A7A7;
-    background-color: white;
-    color: black;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 1em;
-}
+    aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
+        border: 1px solid #A7A7A7;
+        background-color: white;
+        color: black;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 1em;
+    }
+    
+    aside.fig-desc > *, aside.table-desc > *,
+    aside[epub|type='z3998:production'] > * {
+        color: black;
+    }
 
-aside.fig-desc > *, aside.table-desc > *,
-aside[epub|type='z3998:production'] > * {
-    color: black;
-}
-```
+
+<a id="table_ref"></a>
 
 ## CSS example: Tables
 
-``` css
-table {
-    border: 2px solid gray;
-    padding: 1em;
-    font-size: 80%;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
-    border-collapse: collapse;
-}
+    table {
+        border: 2px solid gray;
+        padding: 1em;
+        font-size: 80%;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+        border-collapse: collapse;
+    }
+    
+    th {
+        border: 1px solid gray;
+        font-weight: bold;
+        text-align: left;
+        vertical-align: top;
+        padding: 0.5em;
+    }
+    
+    td {
+        border: 1px solid gray;
+        padding: 0.5em;
+    }
+    
+    table caption {
+        text-align: left;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
 
-th {
-    border: 1px solid gray;
-    font-weight: bold;
-    text-align: left;
-    vertical-align: top;
-    padding: 0.5em;
-}
 
-td {
-    border: 1px solid gray;
-    padding: 0.5em;
-}
-
-table caption {
-    text-align: left;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-```
+<a id="table-caps_ref"></a>
 
 ## CSS example: Table caption (for table style without borders for table and td cells)
 
-``` css
-caption {
-    font-weight: 700;
-    text-align: left;
-    background-color: #F5F5F5;
-    padding: 0.25em 0.2em 0.25em 0.2em;
-    border-top: 1px solid #595959;
-    border-bottom: 1px solid #595959;
-}
-```
+    caption {
+        font-weight: 700;
+        text-align: left;
+        background-color: #F5F5F5;
+        padding: 0.25em 0.2em 0.25em 0.2em;
+        border-top: 1px solid #595959;
+        border-bottom: 1px solid #595959;
+    }
+
+
+<a id="table-wrapper_ref"></a>
 
 ## CSS example: Table wrapper
 
-``` css
-div.table-wrapper {
-    overflow-x: auto;
-    /* workaround for Calibre: add a vertical scrollbar
-   to prevent clipping of table at page breaks */
-    overflow-y: auto;
-    max-width: 100%;
-    max-height: 100%; /* for Calibre */
-}
-```
+    div.table-wrapper {
+        overflow-x: auto;
+        /* workaround for Calibre: add a vertical scrollbar
+             to prevent clipping of table at page breaks */
+        overflow-y: auto;
+        max-width: 100%;
+        max-height: 100%; /* for Calibre */
+    }
+
+
+<a id="math_ref"></a>
 
 ## CSS example: Math
 
-``` css
-  math[display~='block'] {
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-```
+      math[display~='block'] {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+
+<a id="media-css_ref"></a>
 
 ## CSS example: Media overlays - CSS
 
-``` css
-/* for highlighting active text */
+    /* for highlighting active text */
+    
+    .my-active-item {
+        background-color: yellow;
+        color: black !important;
+    }
+    
+    /* for fading text that is not being read*/
+    html.my-document-playing * {
+        color: gray;
+    }
 
-.my-active-item {
-    background-color: yellow;
-    color: black !important;
-}
 
-/* for fading text that is not being read*/
-html.my-document-playing * {
-    color: gray;
-}
-```
+<a id="media-opf_ref"></a>
 
 ## Example: Media overlays - opf-file
 
-``` xml
-<package>
+    <package>
+    
+      [...]
+    
+      <!-- for highlighting active text -->
+    
+      <meta property="media:active-class">my-active-item</meta>
+    
+      <!-- for fading text that is not being read -->
+      <meta property="media:playback-active-class">my-document-playing</meta>
+    
+    </package>
 
-  [...]
-
-  <!-- for highlighting active text -->
-
-  <meta property="media:active-class">my-active-item</meta>
-
-  <!-- for fading text that is not being read -->
-  <meta property="media:playback-active-class">my-document-playing</meta>
-
-</package>
-```
