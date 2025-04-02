@@ -2,13 +2,14 @@
 title: "Guidelines for accessible CSS"
 date: 2024-11-01
 author: "Oscar Lagerström Carlsson, Christian Egli, Jonas Lillqvist, Linda Lindhé"
+version: "0.1"
 ---
 
 # {{ page.title }}
 
 {{ page.author }}
 
-{{ page.date }}
+Version {{ page.version }}, {{ page.date }}
 
 # Introduction
 
