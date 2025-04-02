@@ -4,6 +4,10 @@ date: 2024-11-01
 author: "Oscar Lagerström Carlsson, Christian Egli, Jonas Lillqvist, Linda Lindhé"
 ---
 
+# {{ page.title }}
+{{ page.date }}
+By {{ page.author }}
+
 # Introduction
 
 This document provides general guidelines for creating a common,
