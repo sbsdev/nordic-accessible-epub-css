@@ -20,10 +20,10 @@ general guidance for what said CSS needs to cater for.
 
 There are some CSS files in the samples folder
 
-- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/mtm.css][=mtm.css=]] is from a sample book from MTM. This css has been enhanced
+- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/mtm.css][mtm.css]] is from a sample book from MTM. This css has been enhanced
   to comply with the guidelines
-- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/sbs.css][=sbs.css=]] is the CSS that is included in all the ebooks produced by SBS
-- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/epub3-to-daisy202.css][=epub3-to-daisy202.css=]] is from the DAISY pipeline
+- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/sbs.css][sbs.css]] is the CSS that is included in all the ebooks produced by SBS
+- [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/epub3-to-daisy202.css][epub3-to-daisy202.css]] is from the DAISY pipeline
 
 * Build
 
