@@ -1,6 +1,6 @@
 /* This CSS is an EPUB 3 port of the legacy CSS used in MTM's DAISY talking books.
 Part of the CSS was also integrated from/inspired by the EPUB CSS used by SPSM.
-Changes and additions inspired by Guidelines for accessible CSS 2024.
+Changes and additions inspired by Guidelines for accessible CSS 2025.
 
 Version: 2.0
 
@@ -15,6 +15,7 @@ body {
     font-family: arial, helvetica, verdana, sans-serif;
     margin-left: 10%;
     margin-right: 10%;
+    line-height: 1.4;
 }
 
 /* --- HEADINGS --- */
@@ -22,36 +23,36 @@ h1.title {
    font-size: 250%;
    font-style: normal;
    font-weight: bold;
-   margin-top: 5em;
-   margin-bottom: 2em;
+   margin-top: 4em;
+   margin-bottom: 1.5em;
 }
 
 h1 {
    font-size: 175%;
    font-weight: bold;
-   margin-top: 3em;
-   margin-bottom: 1em;
+   margin-top: 2.5em;
+   margin-bottom: 0em;
 }
 
 h2 {
    font-size: 150%;
    font-weight: normal;
-   margin-top: 2.5em;
-   margin-bottom: 1em;
+   margin-top: 2em;
+   margin-bottom: 0em;
 }
 
 h3 {
    font-size: 135%;
    font-weight: normal;
-   margin-top: 2em;
-   margin-bottom: 1em;
+   margin-top: 1.5em;
+   margin-bottom: 0.5em;
 }
 
 h4 {
    font-size: 115%;
    font-weight: bold;
    margin-top: 1em;
-   margin-bottom: 0.5em;
+   margin-bottom: 0em;
 }
 
 h5 {
@@ -95,7 +96,7 @@ a[role~='doc-noteref'] {
 }
 
 a[role~='doc-backlink'] {
-   font-size: 75%;
+   font-size: 85%;
    text-decoration: none;
    border: 1px solid #FF0000; 
 }
@@ -107,10 +108,6 @@ aside[role~='doc-footnote'] {
 }
 
 /* --- PAGE NUMBERS --- */
-[epub|type='pagebreak']:empty:before {
-    content: attr(aria-label);
-}
-
 [epub|type='pagebreak'] {
     font-family: arial, helvetica, verdana, sans-serif;
     font-weight: bold; 
@@ -123,16 +120,20 @@ aside[role~='doc-footnote'] {
     margin-top: 3em; 
 }
 
+[epub|type='pagebreak']:empty:after {
+    content: attr(aria-label);
+}
+
 /* --- TITLEPAGE/FRONTMATTER --- */
 .docauthor, *[epub|type='z3998:author'] {
    font-size: 140%;
    display: block;
    font-weight: normal;
-   margin-top: 2em;
+   margin-top: 1.5em;
 }
 
 span[epub|type='subtitle'] {
-   font-size: 50%;
+   font-size: 60%;
    display: block;
    margin-top: 1em;
 }
@@ -217,14 +218,20 @@ div.verse > p[epub|type='bridgehead'] {
     font-size: 110%;
 }
 
+/* for cases where the poem is in a blockquote */  
+blockquote div.verse { 
+  font-style: normal; 
+  font-size: 113%;
+} 
+
 p.verse-author {
     margin-left: 2.5em;
 }
 
 span.line { 
-   display: inline-block; 
-   margin-left: 1.2em; 
+   display: inline-block;  
    text-indent: -1.2em; 
+   padding-left: 1.2em;
 } 
 
 span.line_indent {
@@ -274,6 +281,16 @@ span.lic:last-of-type {
 ul + ul, ul + ol, ol + ul {
     margin-top: 1.5em;
 }
+
+/* for cases where the endnotes are plain + non-plain together */ 
+ol.plain li[epub|type='endnote'], ul.plain li[epub|type='endnote'] {
+    margin-left: -1em;
+}
+
+ol.plain li[epub|type='endnote'] a[role='doc-backlink'], ul.plain li[epub|type='endnote'] a[role='doc-backlink'] {
+    margin-left: 1.1em;
+}
+
 
 /* --- DEFINITION LISTS --- */
 dl {
