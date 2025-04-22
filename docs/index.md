@@ -656,8 +656,8 @@ Accessible](https://medium.com/the-readability-group/a-guide-to-understanding-wh
     
     span.line {
         display: inline-block;
-        margin-left: 1.2em;
         text-indent: -1.2em;
+        padding-left: 1.2em;
     }
 
 

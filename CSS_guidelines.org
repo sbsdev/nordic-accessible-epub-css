@@ -634,8 +634,8 @@ Accessible]]
 
   span.line {
       display: inline-block;
-      margin-left: 1.2em;
       text-indent: -1.2em;
+      padding-left: 1.2em;
   }
 #+end_src
 
