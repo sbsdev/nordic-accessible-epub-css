@@ -63,21 +63,21 @@ h3 {
 h4 {
    font-size: 115%;
    font-weight: bold;
-   margin-top: 1em;
+   margin-top: @base-margin;
    margin-bottom: 0em;
 }
 
 h5 {
    font-size: 105%;
    font-weight: bold;
-   margin-top: 1em;
+   margin-top: @base-margin;
    margin-bottom: 0em;
 }
 
 h6, p[epub|type='bridgehead'] {
    font-size: 100%;
    font-weight: bold;
-   margin-top: 1em;
+   margin-top: @base-margin;
    margin-bottom: 0em;
 }
 
@@ -116,7 +116,7 @@ a[role~='doc-backlink'] {
 aside[role~='doc-footnote'] {
   border: thin solid @footnote-border-color;
   padding: 1em;
-  margin: 1em;
+  margin: @base-margin;
 }
 
 /* --- PAGE NUMBERS --- */
@@ -147,14 +147,14 @@ aside[role~='doc-footnote'] {
 span[epub|type='subtitle'] {
    font-size: 60%;
    display: block;
-   margin-top: 1em;
+   margin-top: @base-margin;
 }
 
 /* --- TEXT-BOXES AND ASIDES --- */
 .text-box {
     border: 1px solid @border-color;
     background-color: @text-box-background;
-    margin-top: 1em;
+    margin-top: @base-margin;
     margin-bottom: 1.5em;
     padding-left: 1em;
     padding-right: 1em;
@@ -170,8 +170,8 @@ aside.fig-desc, aside.table-desc, aside[epub|type='z3998:production'] {
     border: 1px solid #A7A7A7;
     background-color: white;
     color: black;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: @base-margin;
+    margin-bottom: @base-margin;
     padding: 1em;
 }
 
@@ -182,7 +182,7 @@ aside.fig-desc > *, aside.table-desc > *, aside[epub|type='z3998:production'] > 
 
 /* reducing initial margin-top for headings inside boxes */
 .text-box h1, .text-box h2, .text-box h3 {
-    margin-top: 1em;
+    margin-top: @base-margin;
 }
 
 /*  --- CONTEXT BREAKS --- */
@@ -277,7 +277,7 @@ ul.plain, ol.plain {
 }
 
 ul li, ol li {
-    margin-top: 1em;
+    margin-top: @base-margin;
 }
 
 li p {
@@ -310,7 +310,7 @@ dl {
 }
 
 dt {
-   margin-top: 1em; 
+   margin-top: @base-margin; 
    font-weight: bold;
 }
 
