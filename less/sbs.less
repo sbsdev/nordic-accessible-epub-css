@@ -8,6 +8,9 @@ Version: 3.0
 
 */
 
+// Options
+@handle-calibre: false;   // Set to true if you need Calibre support
+
 // --- VARIABLES ---
 @primary-font: arial, helvetica, verdana, sans-serif;
 @sans-font: "Source Sans", sans-serif;
@@ -345,9 +348,14 @@ table caption {
 
 div.table-wrapper {
     overflow-x: auto;
-    overflow-y: auto; /*workaround for Calibre: add a vertical scrollbar to prevent clipping of table at page breaks*/
     max-width: 100%;
-    max-height: 100%; /*for Calibre*/
+
+    & when (@handle-calibre) {
+	/* workarounds for Calibre: */
+	/* add a vertical scrollbar to prevent clipping of table at page breaks */
+	overflow-y: auto;
+	max-height: 100%;
+    }
 }
 
 /* --- IMAGES --- */
