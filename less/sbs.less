@@ -212,10 +212,6 @@ blockquote {
     font-size: 90%;
 }
 
-blockquote em {
-    font-style: normal;
-}
-
 /* --- VERSE --- */
 div.verse {
     font-size: 105%;
@@ -253,9 +249,21 @@ span.line_longindent {
     margin-left: 2.5em;
 }
 
-span.linenum{
+span.line span.linenum {
     position: absolute;
     margin-left: -1.5em;
+    font-weight: normal;
+}
+
+span.line_indent span.linenum{
+    position: absolute;
+    margin-left: -3.9em;
+    font-weight: normal;
+}
+
+span.line_longindent span.linenum{
+    position: absolute;
+    margin-left: -5.2em;
     font-weight: normal;
 }
 
