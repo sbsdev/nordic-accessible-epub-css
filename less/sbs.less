@@ -411,8 +411,15 @@ acronym, abbr {
     border-bottom : 1px dashed rgb(255,0,0);
 }
 
-span.invisible {
-    display:none;
+/* visually hidden, but still available to screen readers and TTS */
+p.invisible, span.invisible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 /* --- EMPHASIZE THE ACTIVE ELEMENT --- */
