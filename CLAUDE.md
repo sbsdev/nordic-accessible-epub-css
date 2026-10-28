@@ -7,15 +7,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A shared effort by Nordic accessible-literature libraries (MTM, SBS, Nota, SPSM, …) to define a common, accessible CSS for EPUB3 books. It has two deliverables:
 
 1. **Guidelines document** — `CSS_guidelines.org` (org-mode source of truth) explaining what an accessible EPUB CSS must cater for, with CSS examples in Appendix 2.
-2. **The stylesheet itself** — `less/sbs.less`, a LESS port of `samples/mtm.css` (MTM's CSS, already enhanced to comply with the guidelines).
+2. **The stylesheet itself** — `sbs.css`, a cleaned-up port of `samples/mtm.css` (MTM's CSS, already enhanced to comply with the guidelines).
 
 There are no tests or linters.
 
 ## Build
 
 ```sh
-make            # CSS_guidelines.org -> .pdf/.docx/.html via pandoc (outputs are gitignored)
-make -C less    # less/sbs.less -> less/sbs.css via lessc (output gitignored)
+make    # CSS_guidelines.org -> .pdf/.docx/.html via pandoc (outputs are gitignored)
 ```
 
 ## Publishing the guidelines
@@ -24,10 +23,10 @@ make -C less    # less/sbs.less -> less/sbs.css via lessc (output gitignored)
 
 ## Stylesheet workflow
 
-- `samples/mtm.css` is the upstream reference. When MTM releases a new version, it is first committed to `samples/mtm.css`, then the changes are migrated by hand into `less/sbs.less` (see commit history, e.g. "Migrate changes from latest mtm.css to sbs.less").
-- `sbs.less` factors fonts, colors and margins into variables at the top and uses a `.margin(@top, @bottom)` mixin; keep new rules consistent with that.
-- Calibre-specific rules are guarded by `& when (@handle-calibre)`; the `@handle-calibre` option at the top of the file defaults to `false`.
-- The other files in `samples/` (`sbs.css`, `nota.css`, `epub3-to-daisy202.css`) are reference CSS from other producers/the DAISY pipeline, kept for comparison only.
+- `samples/mtm.css` is the upstream reference. When MTM releases a new version, it is first committed to `samples/mtm.css`, then the changes are migrated by hand into `sbs.css`. Keep `sbs.css` formatted like `mtm.css` so the two stay diffable.
+- `sbs.css` is plain CSS with literal values on purpose: don't introduce `var()`, nesting or a preprocessor, since many e-reader engines don't support them.
+- Calibre-specific workarounds are kept as commented-out rules.
+- The other files in `samples/` (`samples/sbs.css` — SBS's older production CSS, not the same as the root `sbs.css` — `nota.css`, `epub3-to-daisy202.css`) are reference CSS from other producers/the DAISY pipeline, kept for comparison only.
 
 ## Comparison.org
 
