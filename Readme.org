@@ -11,10 +11,20 @@ accessible as possible.
 The goal of this repository is to create a common CSS that
 incorporates all the best practices.
 
+The common CSS is [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/sbs.css][sbs.css]]. It is based on [[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/samples/mtm.css][mtm.css]] from MTM and
+has been adapted to follow the guidelines.
+
 * Guidelines for accessible CSS
 
 The [[https://sbsdev.github.io/nordic-accessible-epub-css/][guidelines]] explain why an accessible CSS is needed and provide
 general guidance for what said CSS needs to cater for.
+
+* Nordic Guidelines 2025-1
+
+The CSS was written for markup according to the 2020-1 version of the
+[[https://format.mtm.se/nordic_epub/][Nordic Guidelines for the Production of Accessible EPUB 3]]. The
+changes needed to support the 2025-1 version are listed in
+[[https://github.com/sbsdev/nordic-accessible-epub-css/blob/main/Changes_2025-1.org][Changes_2025-1.org]].
 
 * Samples
 
