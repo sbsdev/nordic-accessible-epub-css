@@ -1,0 +1,161 @@
+#+title: CSS changes needed for the Nordic Guidelines 2025-1
+#+date: <2026-10-28 Wed>
+#+author: Christian Egli
+#+email: christian.egli@sbs.ch
+#+language: en
+
+* Introduction
+
+The CSS (=sbs.css=) was written for markup according to the 2020-1
+version of the [[https://format.mtm.se/nordic_epub/][Nordic Guidelines for the Production of Accessible EPUB
+3]]. This document lists what needs to change to support the [[https://format.mtm.se/nordic_epub/2025-1/][2025-1
+version]], based on a comparison of the 2015-1, 2020-1 and 2025-1
+versions and the [[https://format.mtm.se/nordic_epub/2025-1/#change-log][2025-1 change log]].
+
+Most entries in the change log concern metadata, the package
+document, the navigation document or alt texts and have no impact on
+the CSS.
+
+* Must fix [0/11]
+2025-1 markup that the CSS renders wrong or not at all.
+
+** TODO Indented verse lines were renamed
+=span.line_indent= and =span.line_longindent= are now
+=span.line-indent= and =span.line-longindent=. In 2025-1 books
+indented lines get no indent and their line numbers are misplaced.
+
+Fix: style both spellings.
+
+** TODO Answer fields were renamed
+=span.answer_1= is now =span.answer1=. Single-character answer fields
+lose their grey box.
+
+Fix: style both spellings.
+
+** TODO Verse with a heading uses =section.verse=
+Verse with a heading is now wrapped in =<section class="verse">=. The
+CSS only styles =div.verse=, so these poems get no verse styling.
+
+Fix: target =.verse= on any element.
+
+** TODO New =div.line-by-line=
+Line-by-line content outside of verse uses =<div class="line-by-line">=.
+The guidelines say the same rules as for verse apply, but the CSS has
+no rules for it.
+
+Fix: add it to every verse rule.
+
+** TODO Numbered paragraphs (new)
+The markup is =<p class="numbered"><span class="parnum">1</span>Text…=
+with no space after the number, so it renders as "1Text…".
+
+Fix: give =span.parnum= spacing or a hanging indent, probably bold.
+
+** TODO Subtitles moved into =hgroup=
+Subtitles used to be =<span epub:type="subtitle">= inside the heading.
+They are now =<p epub:type="subtitle" role="doc-subtitle">= inside an
+=<hgroup>=. The old rule doesn't match, so subtitles render as plain
+paragraphs.
+
+Fix: style =hgroup > p[role~='doc-subtitle']= and keep the old rule
+for 2020-1 books.
+
+** TODO Underline (new)
+Underlined text is marked up as =<span class="underline">=. There is no
+rule for it, so the underline is lost, although the guidelines treat
+it as meaningful.
+
+Fix: =text-decoration: underline=.
+
+** TODO All caps and small caps (new)
+- Lead-ins: the text is now written in normal capitalisation inside
+  =<span class="lead-in">= and the CSS is expected to show the caps.
+  Currently it isn't styled at all.
+- Emphasised caps use =<strong class="all-caps">= and
+  =<strong class="small-caps">=.
+
+Fix: add =text-transform: uppercase= and =font-variant: small-caps=.
+
+** TODO Fake headings replaced
+=<p epub:type="bridgehead">= is now =<p class="faux-hd">=. The verse
+title rule still uses the old name.
+
+Fix: style =p.faux-hd= like a small heading, everywhere and inside
+verse.
+
+** TODO Page breaks inside lists and tables
+2025-1 puts an inline =span= page marker at the end of the last list
+item or in the last table cell. The current rule makes every page
+break a block with a top border, 2em of padding and a 3em margin,
+which looks broken inside a table cell.
+
+Fix: keep the block style for =div= page breaks and give =span= page
+breaks a lighter inline style, at least inside =li= and =td=/=th=.
+
+** TODO Image descriptions in =details=
+The placeholder for text extracted from images can now be
+=<details class="fig-desc">= as well as =<aside class="fig-desc">=. The
+CSS only covers =aside=.
+
+Fix: add =details.fig-desc=.
+
+* Should add [0/5]
+New classes that are unstyled but harmless.
+
+** TODO Chapter and part numbers
+=span.chnum=, =span.partnum=. The guidelines already put a =<br/>=
+after the number, so styling is optional (e.g. smaller, not bold).
+
+** TODO Chapter authors
+=p.chapter-author=: probably style like a smaller =.docauthor=.
+
+** TODO Title page classes
+=p.seriestitle=, =p.contributor=, =p.publisher=, =figure.logo=.
+
+** TODO Continuation headings
+=.cont-hd= is used on both the heading and the section. This is an
+agency decision, but a hint like italics would help readers.
+
+** TODO Image series
+=figure.image-series=. The existing =figure figure { padding-left: 2em }=
+covers it in practice. Targeting =figure.image-series > figure=
+explicitly would avoid indenting other nested figures.
+
+* No CSS needed
+- Headings and navigation: =no-toc=, and the table of contents
+  changes, including =toc-unlinked=, which is in =nav.xhtml=.
+- Covers: =backcover= (renamed from =rearcover=), =leftflap=,
+  =rightflap=. None of them was ever styled.
+- Figure classes: =figure.image=, =figure.table=, =figure.other=.
+- Already correct: =div.table-wrapper=, =hr.emptyline=/=hr.separator=,
+  =ol.plain= for printed tables of contents with =span.lic=, and
+  footnote, endnote and backlink markup.
+- Sentence markup: =span.sentence= is for read-aloud sync only. The
+  active sentence is highlighted by =.my-active-item=.
+
+* Cleanup: legacy selectors
+Selectors that are in neither 2020-1 nor 2025-1:
+
+- From 2015-1 or older:
+  - =*[epub|type='z3998:author']= and =aside[epub|type='z3998:production']=
+  - =li[epub|type='endnote']=, in the plain-list endnote rules
+- Origin unclear: =aside.table-desc=, =p.indented=,
+  =p.invisible=/=span.invisible=
+
+These cost almost nothing to keep and protect older books. Move them
+into a clearly marked "legacy" block rather than delete them.
+
+* Open questions
+- Should the CSS keep supporting the 2020-1 names (=line_indent=,
+  =answer_1=, subtitle =span=, =bridgehead=) alongside the 2025-1 ones?
+  Proposal: yes, since some libraries will keep producing 2020-1 books
+  for a while.
+- Lead-ins: small caps or all caps?
+- =strong.all-caps= / =strong.small-caps=: should they stay bold? The
+  source styled them as caps, not necessarily bold.
+- Continuation headings: should they look different at all?
+
+* Sources
+- [[https://format.mtm.se/nordic_epub/2025-1/][Nordic Guidelines 2025-1]] and its [[https://github.com/nlbdev/nordic-accessible-epub-guidelines/blob/2025-1/guidelines/guidelines.md][source on GitHub]]
+- [[https://format.mtm.se/nordic_epub/2020-1/][Nordic Guidelines 2020-1]]
+- [[https://format.mtm.se/nordic_epub/2015-1/nordic_guidelines_epub3-2015-1.pdf][Nordic Guidelines 2015-1]] (PDF)
